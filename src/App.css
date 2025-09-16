@@ -3,6 +3,11 @@
   width: auto;
 }
 
+.building {
+  height: 500px;
+  width: auto;
+}
+
 .mainContainer {
   display: flex;
   justify-content: center;
@@ -12,4 +17,8 @@
 .container {
   display: flex;
   align-items: center;
+}
+
+.center {
+  text-align: center;
 }
