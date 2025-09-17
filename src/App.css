@@ -12,6 +12,70 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  vertical-align: text-top;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  gap: 10%;
+}
+
+.mainContainer img{
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border: 2px solid #af4c0f;
+}
+
+.layerContainer {
+  justify-content: center;
+  align-items: center;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.layerContainer img {
+  height: 70px;
+  width: 100%;
+  border: none;
+}
+
+.layerContainer button {
+  height: 50px;
+  width: 100%;
+  border: none;
+}
+
+.layerContainer button:hover {
+  filter: brightness(150%);
+}
+
+.layerContainer button:focus {
+  filter: brightness(50%)
+}
+
+.layerContainer button:active {
+  transform: translateY(4px);
+}
+
+.layerContainer button:disabled {
+  filter: brightness(30%);
+}
+
+.up {
+  background-image: url('/arrows/uparrow.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:contain;
+  background-color:transparent;
+}
+
+.down {
+  background-image: url('/arrows/downarrow.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:contain ;
+  background-color: transparent;
 }
 
 .container {
@@ -21,4 +85,31 @@
 
 .center {
   text-align: center;
+}
+
+.campusButton{
+  border: 1px outset rgb(224,0,0);
+  background-color: #af4c0f;
+  color: rgb(255,255,234);
+  height:50px;
+  width:100px;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.campusButton:hover {
+  background-color: rgb(224,0,0);
+  color:white;
+}
+
+.campusButton:focus {
+    background-color: rgb(150,20,20);
+}
+
+body {
+  background-color: rgb(255,255,234);
+}
+
+h1 {
+  color: rgba(69, 25, 25, 0.87);
 }

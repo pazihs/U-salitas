@@ -12,11 +12,9 @@ const Home = () => {
         <div>
             <h1 className="center">Mapa Beauchef</h1>   
             <div className='mainContainer'>
-                <div className='container'>
-                    <button onClick={() => routeChange("/850")}>850</button>
-                    <img src={fcfm} className='fcfm'></img>
-                    <button onClick={() => routeChange("/851")}>851</button>
-                </div>
+                <button className='campusButton' onClick={() => routeChange("/850")}>850</button>
+                <img src={fcfm} className='fcfm'></img>
+                <button className='campusButton' onClick={() => routeChange("/851")}>851</button>
             </div>
         </div>
     );
