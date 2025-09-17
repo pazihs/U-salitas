@@ -5,7 +5,7 @@ const Campus850 = () => {
         <div>
             <h1 className="center">{850}</h1>
             <div className="mainContainer">
-                <img className="building" src={image850}></img>
+                <img className="campus850" src={image850}></img>
             </div>
         </div>
     );
