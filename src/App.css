@@ -50,16 +50,12 @@
   filter: brightness(150%);
 }
 
-.layerContainer button:focus {
-  filter: brightness(50%)
-}
-
 .layerContainer button:active {
   transform: translateY(4px);
 }
 
 .layerContainer button:disabled {
-  filter: brightness(30%);
+  filter: opacity(50%);
 }
 
 .up {
@@ -98,12 +94,11 @@
 }
 
 .campusButton:hover {
-  background-color: rgb(224,0,0);
-  color:white;
+  filter: brightness(150%);
 }
 
-.campusButton:focus {
-    background-color: rgb(150,20,20);
+.campusButton:active {
+  transform: translateY(4px);
 }
 
 body {

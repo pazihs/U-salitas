@@ -4,6 +4,7 @@ import layers_icon from "../assets/layers.png"
 const Inferiores = () => {
     const layers: Array<string> = ["851-3", "851-2", "851-1"];
     const [level, setLevel] = useState<number>(layers.length-1);
+    
     const changeLevel = (direction: number) => {
         const newLevel = level+direction;
         if (newLevel < 0) setLevel(0);
