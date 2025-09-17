@@ -3,18 +3,21 @@ import { useEffect, useState } from "react";
 import type { ClassroomData } from "../types/classrooms";
 import { search } from "../services/search";
 
-function Search({ setClassrooms }: { setClassrooms: React.Dispatch<React.SetStateAction<ClassroomData[]>> }) {
-    //   const [error, setError] = useState(null);
+type SearchProps = {
+    setClassrooms: React.Dispatch<React.SetStateAction<ClassroomData[]>>;
+};
+
+function Search({ setClassrooms }: SearchProps) {
+    // const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState<ClassroomData[]>([]);
     const [query, setQuery] = useState("");
 
-    const [searchParam] = useState(["name", "zone", "capacity", "building"]); // podríamos agregar "building"
-    // Similar a componentDidMount y componentDidUpdate:
-    // Nota: el array vacío [] significa
-    // que este useEffect correrá una sola vez,
-    // parecido a componentDidMount()
+    // Campos a buscar
+    const [searchParam] = useState(["name", "zone", "capacity", "building"]);
+
     useEffect(() => {
+        // Temporal
         setItems([
             { id: '1', name: 'B01', floor: -1, building: '851', zone: 'oriente', capacity: 100, likes: 10, dislikes: 2 },
             { id: '2', name: 'B02', floor: -1, building: '851', zone: 'oriente', capacity: 80, likes: 5, dislikes: 1 },
@@ -40,7 +43,7 @@ function Search({ setClassrooms }: { setClassrooms: React.Dispatch<React.SetStat
 
     //   if (error) {
     //     return <div>Error: {error.message}</div>;
-    //   } else 
+    //   } else
     if (!isLoaded) {
         return <div>Loading...</div>;
     } else {
@@ -54,12 +57,8 @@ function Search({ setClassrooms }: { setClassrooms: React.Dispatch<React.SetStat
                             name="search-form"
                             id="search-form"
                             className="search-input"
-                            placeholder="Busca tu sala..."
+                            placeholder="Sala, edificio, zona..."
                             value={query}
-                            /*
-                            // establece el valor de nuestro parametro query del useState
-                            //  cada vez que el usuario tipea en el campo de búsqueda
-                            */
                             onChange={(e) => {
                                 setQuery(e.target.value);
                                 setClassrooms(search(items, e.target.value, searchParam));

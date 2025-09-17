@@ -12,4 +12,4 @@ export function search(items: ClassroomData[], query: string, searchParam: strin
                 );
         });
     });
-}
+};

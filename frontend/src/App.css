@@ -2,7 +2,6 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
 .card {
@@ -20,4 +19,31 @@
   background-color: #af4c0f;
   color: #fff;
   padding: 1rem;
+}
+
+.search-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 70px;
+}
+
+.search-title {
+  text-align: left;
+}
+
+.classrooms-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.classroom {
+  border: 2px solid #af4c0f;
+  border-radius: 20px;
+  margin: 1rem;
+  padding: 1rem;
+  width: 500px;
+  background-color: #fff;
 }

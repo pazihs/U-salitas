@@ -1,38 +1,16 @@
-//import { Button, IconButton, ListItem, ListItemText } from "@mui/material";
-// import type { Classroom } from "../types/notes";
 import type { ClassroomData } from "../types/classrooms";
-// import LabelImportantOutlineIcon from "@mui/icons-material/LabelImportantOutline";
-// import LabelImportantIcon from "@mui/icons-material/LabelImportant";
 
-interface Prop {
+interface ClassroomProps {
   classroom: ClassroomData;
 }
-const Classroom = ({ classroom }: Prop) => (
-    <div>
-        <h2>{classroom.name}</h2>
-        <p>Building: {classroom.building}</p>
-        <p>Zone: {classroom.zone}</p>
-        <p>Capacity: {classroom.capacity}</p>
-        <p>Likes: {classroom.likes}</p>
-        <p>Dislikes: {classroom.dislikes}</p>
-    </div>
-//   <ListItem
-//     disablePadding
-//     // secondaryAction={
-//     // //   <IconButton edge="end" aria-label="delete" onClick={toggleImportance}>
-//     // //     {note.important ? (
-//     // //     //   <LabelImportantIcon color="error" />
-//     // //     ) : (
-//     // //     //   <LabelImportantOutlineIcon />
-//     // //     )}
-//     // //   </IconButton>
-//     // }
-//   >
-//     <ListItemText primary={classroom.name} />
-//     <ListItemText primary={`Building: ${classroom.building}`} />
-//     <ListItemText primary={`Zone: ${classroom.zone}`} />
-//     <ListItemText primary={`Capacity: ${classroom.capacity}`} />
-//   </ListItem>
+
+const Classroom = ({ classroom }: ClassroomProps) => (
+  <div className="classroom">
+    <h2>{classroom.name}</h2>
+    <p>Edificio: {classroom.building}, Zona: {classroom.zone}</p>
+    <p>Piso: {classroom.floor}</p>
+    <p>Capacidad: {classroom.capacity}</p>
+  </div>
 );
 
 export default Classroom;
