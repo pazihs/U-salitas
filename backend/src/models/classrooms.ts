@@ -15,6 +15,7 @@ const classroomSchema = new mongoose.Schema({
     capacity: { type: Number, required: true, },
     likes: { type: Number, default: 0, },
     dislikes: { type: Number, default: 0, },
+    image: {type: String, default: "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg"},
 });
 
 const Classroom = mongoose.model("Classroom", classroomSchema);

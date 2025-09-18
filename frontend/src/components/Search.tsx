@@ -2,13 +2,14 @@
 import { useEffect, useState } from "react";
 import type { ClassroomData } from "../types/classrooms";
 import { search } from "../services/search";
+import classroomService from "../services/classrooms";
 
 type SearchProps = {
     setClassrooms: React.Dispatch<React.SetStateAction<ClassroomData[]>>;
 };
 
 function Search({ setClassrooms }: SearchProps) {
-    // const [error, setError] = useState(null);
+    const [error, setError] = useState<Error | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState<ClassroomData[]>([]);
     const [query, setQuery] = useState("");
@@ -17,35 +18,25 @@ function Search({ setClassrooms }: SearchProps) {
     const [searchParam] = useState(["name", "zone", "capacity", "building"]);
 
     useEffect(() => {
-        // Temporal
-        setItems([
-            { id: '1', name: 'B01', floor: -1, building: '851', zone: 'oriente', capacity: 100, likes: 10, dislikes: 2 },
-            { id: '2', name: 'B02', floor: -1, building: '851', zone: 'oriente', capacity: 80, likes: 5, dislikes: 1 },
-            { id: '3', name: 'QO', floor: 2, building: '850', zone: 'química', capacity: 80, likes: 3, dislikes: 10 },
-        ])
-        setIsLoaded(true);
-        // fetch("https://api.example.com/items")
-        //   .then(res => res.json())
-        //   .then(
-        //     (result) => {
-        //       setIsLoaded(true);
-        //       setItems(result);
-        //     },
-        //     //Nota: es importante manejar los errores aquí
-        //     //en vez de un bloque catch() para evitar tragarnos
-        //     // excepciones de errores en los componentes.
-        //     (error) => {
-        //       setIsLoaded(true);
-        //       setError(error);
-        //     }
-        //   )
+        classroomService.getAll().then(
+            (result) => {
+                setIsLoaded(true);
+                setItems(result);
+                console.log("items");
+                console.log(result);
+            },
+            (error) => {
+                console.log("a")
+                setIsLoaded(true);
+                setError(error);
+            }
+        );
     }, [])
 
-    //   if (error) {
-    //     return <div>Error: {error.message}</div>;
-    //   } else
-    if (!isLoaded) {
-        return <div>Loading...</div>;
+    if (error instanceof Error) {
+        return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+        return <div>Cargando...</div>;
     } else {
         return (
             <div className="wrapper" style={{ marginLeft: "auto", marginRight: "30px" }}>

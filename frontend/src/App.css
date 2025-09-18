@@ -46,4 +46,6 @@
   padding: 1rem;
   width: 500px;
   background-color: #fff;
+  align-items: center;
+  display: flex;
 }

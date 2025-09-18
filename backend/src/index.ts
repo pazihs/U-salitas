@@ -87,6 +87,7 @@ app.post("/api/classrooms", (request, response, next) => {
             capacity: body.capacity,
             likes: body.likes || 0,
             dislikes: body.dislikes || 0,
+            image: body.image || "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg",
         };
 
         const classroomDocument = new Classroom(classroom);

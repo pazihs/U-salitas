@@ -7,4 +7,5 @@ export type ClassroomData = {
     capacity: number;
     likes: number;
     dislikes: number;
+    image: string;
 };
