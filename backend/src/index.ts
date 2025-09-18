@@ -1,7 +1,27 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express, { NextFunction, Request, Response } from "express";
+import Classroom from "./models/classrooms";
+import mongoose from "mongoose";
+
+const url = process.env.MONGODB_URI;
+
+mongoose.set("strictQuery", false);
+if (url) {
+    console.log("connecting to", url);
+    mongoose.connect(url)
+        .then(() => {
+            console.log("Connected to MongoDB");
+        })
+        .catch((error) => {
+            console.log("error connecting to MongoDB:", error.message);
+        });
+}
 
 const app = express();
 app.use(express.json());
+app.use(express.static("dist"));
 
 const requestLogger = (
     request: Request,
@@ -16,76 +36,93 @@ const requestLogger = (
 };
 app.use(requestLogger);
 
-let notes = [
-    {
-        id: 1,
-        content: "HTML is easy",
-        important: true,
-    },
-    {
-        id: 2,
-        content: "Browser can execute only JavaScript",
-        important: false,
-    },
-    {
-        id: 3,
-        content: "GET and POST are the most important methods of HTTP protocol",
-        important: true,
-    },
-];
-
 app.get("/", (request, response) => {
     response.send("<h1>Hello World!</h1>");
 });
 
-app.get("/api/notes", (request, response) => {
-    response.json(notes);
+app.get("/api/classrooms", (request, response) => {
+    Classroom.find({}).then((classrooms) => {
+        response.json(classrooms);
+    });
 });
 
-app.get("/api/notes/:id", (request, response) => {
+app.get("/api/classrooms/:id", (request, response, next) => {
     const id = Number(request.params.id);
-    const note = notes.find((note) => note.id === id);
-    if (note) {
-        response.json(note);
-    } else {
-        response.status(404).end();
-    }
+    Classroom.findById(id)
+        .then((classroom) => {
+            if (classroom) {
+                response.json(classroom);
+            } else {
+                response.status(404).end();
+            }
+        })
+        .catch((error) => {
+            next(error);
+        });
 });
 
-app.delete("/api/notes/:id", (request, response) => {
-    const id = Number(request.params.id);
-    notes = notes.filter((note) => note.id !== id);
-    response.status(204).end();
+app.delete("/api/classrooms/:id", (request, response, next) => {
+    const id = request.params.id;
+    Classroom.findByIdAndDelete(id)
+        .then(() => {
+            response.status(204).end();
+        })
+        .catch((error) => {
+            next(error);
+        });
 });
 
-const generateId = () => {
-    const maxId = notes.length > 0 ?
-        Math.max(...notes.map((n) => n.id)) : 0;
-    return maxId + 1;
-};
-app.post("/api/notes", (request, response) => {
+app.post("/api/classrooms", (request, response, next) => {
     const body = request.body;
-    if (!body.content) {
+    if (!body.name || !body.floor || !body.building || !body.zone || !body.capacity) {
         response.status(400).json({
-            error: "content missing",
+            error: "parameter missing",
         });
     } else {
-        const note = {
-            content: body.content,
-            important: body.important || false,
-            id: generateId(),
+        const classroom = {
+            name: body.name,
+            floor: body.floor,
+            building: body.building,
+            zone: body.zone,
+            capacity: body.capacity,
+            likes: body.likes || 0,
+            dislikes: body.dislikes || 0,
         };
-        notes = notes.concat(note);
-        response.json(note);
+
+        const classroomDocument = new Classroom(classroom);
+        classroomDocument
+            .save()
+            .then((savedClassroom) => {
+                response.status(201).json(savedClassroom);
+            })
+            .catch((error) => next(error));
     }
 });
+
+const errorHandler = (
+    error: { name: string; message: string },
+    request: Request,
+    response: Response,
+    next: NextFunction
+) => {
+    console.error(error.message);
+
+    console.error(error.name);
+    if (error.name === "CastError") {
+        response.status(400).send({ error: "malformatted id" });
+    } else if (error.name === "ValidationError") {
+        response.status(400).json({ error: error.message });
+    }
+    next(error);
+};
+app.use(errorHandler);
 
 const unknownEndpoint = (request: Request, response: Response) => {
     response.status(404).send({ error: "unknown endpoint" });
 };
 app.use(unknownEndpoint);
 
-const PORT = 3001;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });

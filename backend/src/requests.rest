@@ -1,13 +1,9 @@
 
-GET http://localhost:3001/api/notes/
+GET http://localhost:3001/api/classrooms/
 
 ###
-POST http://localhost:3001/api/notes
+POST http://localhost:3001/api/classrooms/
 Content-Type: application/json
 
-{
-    "content": "Probando en VSCode",
-    "important": true
-}
-
+{ "id": 3, "name": "QO", "floor": 2, "building": "850", "zone": "química", "capacity": 80, "likes": 3, "dislikes": 10 }
 ###
