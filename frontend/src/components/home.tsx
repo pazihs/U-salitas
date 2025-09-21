@@ -4,13 +4,13 @@ import { useNavigate } from "react-router-dom";
 
 
 const Home = () => {
-    const navigate = useNavigate(); 
-    const routeChange = (path: string) =>{ 
+    const navigate = useNavigate();
+    const routeChange = (path: string) => {
         navigate(path);
     }
-    return(
+    return (
         <div>
-            <h1 className="center">Mapa Beauchef</h1>   
+            <h1 className="center">Mapa Beauchef</h1>
             <div className='mainContainer'>
                 <button className='campusButton' onClick={() => routeChange("/850")}>850</button>
                 <img src={fcfm} className='fcfm'></img>

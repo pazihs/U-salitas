@@ -1,9 +1,9 @@
-import './App.css'
-import Campus850 from './components/campus850';
-import Campus851 from './components/campus851';
-import Home from './components/home'
-import Layers from './components/layers';
-import Inferiores from './components/inferiores';
+import './Map.css'
+import Campus850 from './campus850';
+import Campus851 from './campus851';
+import Home from './home'
+import Layers from './layers';
+import Inferiores from './inferiores';
 
 import {
   Route,
@@ -11,7 +11,7 @@ import {
   Routes,
 } from "react-router-dom";
 
-function App() {
+const Map = () =>{
   return (
     <Router>
       <Routes>
@@ -25,4 +25,4 @@ function App() {
   )
 }
 
-export default App
+export default Map

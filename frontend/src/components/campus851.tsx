@@ -12,9 +12,9 @@ const Campus851 = () => {
             <div className="mainContainer">
                 <img className="building" src={image851}></img>
                 <div>
-                    <button onClick={() => routeChange("poniente")}>Poniente</button>
-                    <button onClick={() => routeChange("oriente")}>Oriente</button>
-                    <button onClick={() => routeChange("norte")}>Norte</button>
+                    <button /*onClick={() => routeChange("poniente")}*/>Poniente</button>
+                    <button /*onClick={() => routeChange("oriente")}*/>Oriente</button>
+                    <button /*onClick={() => routeChange("norte")}*/>Norte</button>
                     <button onClick={() => routeChange("pisos-inferiores")}>Pisos inferiores</button>
                 </div>
             </div>

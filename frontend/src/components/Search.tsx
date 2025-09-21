@@ -6,9 +6,10 @@ import classroomService from "../services/classrooms";
 
 type SearchProps = {
     setClassrooms: React.Dispatch<React.SetStateAction<ClassroomData[]>>;
+    setQ: React.Dispatch<React.SetStateAction<string>>;
 };
 
-function Search({ setClassrooms }: SearchProps) {
+function Search({ setClassrooms, setQ }: SearchProps) {
     const [error, setError] = useState<Error | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState<ClassroomData[]>([]);
@@ -52,6 +53,7 @@ function Search({ setClassrooms }: SearchProps) {
                             value={query}
                             onChange={(e) => {
                                 setQuery(e.target.value);
+                                setQ(e.target.value);
                                 setClassrooms(search(items, e.target.value, searchParam));
                             }}
                         />

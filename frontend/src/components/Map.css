@@ -59,7 +59,7 @@
 }
 
 .up {
-  background-image: url('/arrows/uparrow.png');
+  background-image: url('../arrows/uparrow.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size:contain;
@@ -67,7 +67,7 @@
 }
 
 .down {
-  background-image: url('/arrows/downarrow.png');
+  background-image: url('../arrows/downarrow.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size:contain ;
@@ -81,6 +81,7 @@
 
 .center {
   text-align: center;
+  margin-top: 70px;
 }
 
 .campusButton{
