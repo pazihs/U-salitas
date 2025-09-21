@@ -1,5 +1,7 @@
 # React + TypeScript + Vite
 
+Agregar el archivo `.env` al repositorio en la carpeta `backend`.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
