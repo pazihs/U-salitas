@@ -26,11 +26,13 @@ function Search({ setClassrooms, setQ }: SearchProps) {
     const [searchParam] = useState(["name", "zone", "capacity", "building"]);
 
     useEffect(() => {
-        c.map((classroom) => {
-            classroomService.create(classroom);
-        })
         classroomService.getAll().then(
             (result) => {
+                if (result.length === 0) {
+                    c.map((classroom) => {
+                        classroomService.create(classroom);
+                    })
+                }
                 setIsLoaded(true);
                 setItems(result);
                 console.log("items");
