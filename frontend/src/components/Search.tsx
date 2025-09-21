@@ -15,10 +15,20 @@ function Search({ setClassrooms, setQ }: SearchProps) {
     const [items, setItems] = useState<ClassroomData[]>([]);
     const [query, setQuery] = useState("");
 
+    // Base de datos temporal (ahora mismo es local)
+    const c: Omit<ClassroomData, 'id' | 'image'>[] = [
+        { "name": "BO1", "floor": -1, "building": "850", "zone": "oriente", "capacity": 100, "likes": 5, "dislikes": 8 },
+        { "name": "BO2", "floor": -1, "building": "850", "zone": "oriente", "capacity": 100, "likes": 10, "dislikes": 2 },
+        { "name": "BO3", "floor": -1, "building": "850", "zone": "oriente", "capacity": 100, "likes": 7, "dislikes": 3 }
+    ];
+
     // Campos a buscar
     const [searchParam] = useState(["name", "zone", "capacity", "building"]);
 
     useEffect(() => {
+        c.map((classroom) => {
+            classroomService.create(classroom);
+        })
         classroomService.getAll().then(
             (result) => {
                 setIsLoaded(true);

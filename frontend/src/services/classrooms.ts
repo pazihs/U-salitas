@@ -9,7 +9,7 @@ const getAll = async () => {
     return request.data;
 };
 
-const create = async (newObject: Omit<ClassroomData, "id">) => {
+const create = async (newObject: Omit<ClassroomData, "id" | "image">) => {
     const request = await axios.post(baseUrl, newObject);
     return request.data;
 };
