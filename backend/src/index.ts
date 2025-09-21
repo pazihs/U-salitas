@@ -5,7 +5,7 @@ import express, { NextFunction, Request, Response } from "express";
 import Classroom from "./models/classrooms";
 import mongoose from "mongoose";
 
-const url = process.env.MONGODB_URI;
+const url = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/classroomsdb";
 
 mongoose.set("strictQuery", false);
 if (url) {
@@ -123,7 +123,7 @@ const unknownEndpoint = (request: Request, response: Response) => {
 };
 app.use(unknownEndpoint);
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
