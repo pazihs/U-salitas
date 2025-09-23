@@ -2,8 +2,8 @@ import image851 from '../assets/851.jpg'
 import { useNavigate } from "react-router-dom";
 
 const Campus851 = () => {
-    const navigate = useNavigate(); 
-    const routeChange = (path: string) =>{ 
+    const navigate = useNavigate();
+    const routeChange = (path: string) => {
         navigate(path);
     }
     return (

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import type { ClassroomData } from "../types/classrooms";
 import Search from "./Search";
 
@@ -7,10 +8,12 @@ type NavBarProps = {
 };
 
 const NavBar = ({ setClassrooms, setQuery }: NavBarProps) => {
+    const navigate = useNavigate();
     return (
         <nav className="navbar">
             <Search setClassrooms={setClassrooms} setQ={setQuery} />
-            <button style={{ marginRight: "30px" }}>Iniciar sesión</button>
+            <button style={{ marginRight: "15px" }}>Iniciar sesión</button>
+            <button style={{ marginRight: "30px" }} onClick={() => navigate("/")}>Inicio</button>
         </nav>
     );
 };

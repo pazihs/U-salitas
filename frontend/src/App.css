@@ -19,6 +19,7 @@
   background-color: #af4c0f;
   color: #fff;
   padding: 1rem;
+  z-index: 1;
 }
 
 .search-results-container {
