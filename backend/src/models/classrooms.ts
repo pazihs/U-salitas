@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-interface ClassroomData {
+export interface ClassroomData {
   id: string;
   name: string;
   floor: number;
@@ -27,8 +27,6 @@ const classroomSchema = new mongoose.Schema({
     image: {type: String, default: "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg"},
 });
 
-const Classroom = mongoose.model("Classroom", classroomSchema);
-
 classroomSchema.set("toJSON", {
   transform: (
     document,
@@ -39,5 +37,7 @@ classroomSchema.set("toJSON", {
     delete returnedObject.__v;
   },
 });
+
+const Classroom = mongoose.model("Classroom", classroomSchema);
 
 export default Classroom;
