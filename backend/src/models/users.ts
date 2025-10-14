@@ -5,17 +5,17 @@ interface UserData {
   username: string;
   email: string;
   passwordHash: string;
-  notes: mongoose.Types.ObjectId[];
+  reviews: mongoose.Types.ObjectId[];
 }
 
 const userSchema = new mongoose.Schema<UserData>({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   passwordHash: String,
-  notes: [
+  reviews: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Note",
+      ref: "Review",
     },
   ],
 });

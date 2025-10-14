@@ -41,6 +41,7 @@ router.post("/", async (request, response, next) => {
       likes: body.likes || 0,
       dislikes: body.dislikes || 0,
       image: body.image || "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg",
+      reviews: body.reviews || [],
     };
 
     const classroomDocument = new Classroom(classroom);
@@ -49,27 +50,28 @@ router.post("/", async (request, response, next) => {
   }
 });
 
-// router.put("/:id", async (request, response, next) => {
-//   const { name, floor, building, zone, capacity, likes, dislikes, image } = request.body;
+router.put("/:id", async (request, response, next) => {
+  const { name, floor, building, zone, capacity, likes, dislikes, image, reviews } = request.body;
 
-//   const classroom = await Classroom.findById(request.params.id);
+  const classroom = await Classroom.findById(request.params.id);
 
-//   if (classroom) {
-//     classroom.name = name;
-//     classroom.floor = floor;
-//     classroom.building = building;
-//     classroom.zone = zone;
-//     classroom.capacity = capacity;
-//     classroom.likes = likes;
-//     classroom.dislikes = dislikes;
-//     classroom.image = image;
+  if (classroom) {
+    classroom.name = name;
+    classroom.floor = floor;
+    classroom.building = building;
+    classroom.zone = zone;
+    classroom.capacity = capacity;
+    classroom.likes = likes;
+    classroom.dislikes = dislikes;
+    classroom.image = image;
+    classroom.reviews = reviews;
 
-//     classroom.save().then((updatedClassroom) => {
-//       response.json(updatedClassroom);
-//     });
-//   } else {
-//     response.status(404).end();
-//   }
-// });
+    classroom.save().then((updatedClassroom) => {
+      response.json(updatedClassroom);
+    });
+  } else {
+    response.status(404).end();
+  }
+});
 
 export default router;

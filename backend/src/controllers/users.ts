@@ -9,6 +9,16 @@ router.get("/", async (request, response) => {
   response.json(users);
 });
 
+router.get("/:id", async (request, response, next) => {
+  const id = request.params.id;
+  const user = await User.findById(id);
+  if (user) {
+    response.json(user);
+  } else {
+    response.status(404).end();
+  }
+});
+
 router.post("/", async (request, response) => {
   const { username, email, password } = request.body;
 
