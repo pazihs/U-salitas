@@ -1,7 +1,16 @@
-import dotenv from "dotenv";
-dotenv.config();
-
 import mongoose from "mongoose";
+
+interface ClassroomData {
+  id: string;
+  name: string;
+  floor: number;
+  building: "850" | "851";
+  zone: string;
+  capacity: number;
+  likes?: number;
+  dislikes?: number;
+  image?: string;
+}
 
 const classroomSchema = new mongoose.Schema({
     name: {

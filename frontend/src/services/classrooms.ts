@@ -1,6 +1,6 @@
 import axios from "axios";
 import type { ClassroomData } from "../types/classrooms";
-const baseUrl = "/classrooms";
+const baseUrl = "/api/classrooms";
 
 const getAll = async () => {
     const request = await axios.get(baseUrl);
