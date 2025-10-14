@@ -2,7 +2,7 @@ import './Map.css'
 import Campus850 from './campus850';
 import Campus851 from './campus851';
 import Home from './home'
-import Layers from './layers';
+import Layers from './Layers';
 import Inferiores from './inferiores';
 
 import {

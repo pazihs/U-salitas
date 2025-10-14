@@ -10,10 +10,10 @@
   "license": "ISC",
   "scripts": {
     "build": "tsc",
-    "start": "NODE_ENV=production node dist/index.js",
+    "start": "NODE_ENV=production node dist/src/index.js",
     "dev": "NODE_ENV=development ts-node-dev src/index.ts",
     "test": "NODE_ENV=test tsx --test --test-concurrency=1 tests/**/*.test.ts",
-    "server": "json-server -p 3001 db.json"
+    "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",

@@ -7,12 +7,6 @@ Dentro de la carpeta `frontend` correr el siguiente comando para instalar las de
 npm install
 ```
 
-Para correrlo se necesita el comando
-
-```
-npm run dev
-```
-
 ## Backend
 Dentro de la carpeta `backend` correr el siguiente comando para instalar las dependencias del proyecto.
 
@@ -20,8 +14,16 @@ Dentro de la carpeta `backend` correr el siguiente comando para instalar las dep
 npm install
 ```
 
-Para correrlo se necesita el comando
+Para correr el proyecto se necesitan los comandos
 
 ```
-npm run server
+npm run build:ui // para compilar el fronted
+npm run build // para compilar el backend
+npm run start
+```
+
+Para correr los test
+
+```
+npm run test
 ```
