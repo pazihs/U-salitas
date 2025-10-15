@@ -1,4 +1,4 @@
-import image851 from '../assets/851.jpg'
+import image851 from '../../assets/851.jpg';
 import { useNavigate } from "react-router-dom";
 
 const Campus851 = () => {
@@ -20,5 +20,5 @@ const Campus851 = () => {
             </div>
         </div>
     );
-}
+};
 export default Campus851;

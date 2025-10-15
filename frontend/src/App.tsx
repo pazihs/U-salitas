@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import type { ClassroomData } from './types/classrooms';
 import Classroom from './components/Classroom';
-import Map from './components/Map';
+import Map from './components/map/Map';
 
 const App = () => {
   const [query, setQuery] = useState<string>('');

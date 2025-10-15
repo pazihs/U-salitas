@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+
 const Layers = () => {
     const {zone} = useParams();
 
@@ -7,6 +8,6 @@ const Layers = () => {
             <img className="building" src={`/${zone}`}></img>
         </div>
     );
-}
+};
 
 export default Layers;

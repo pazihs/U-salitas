@@ -1,9 +1,11 @@
-import './Map.css'
+import './Map.css';
 import Campus850 from './campus850';
 import Campus851 from './campus851';
-import Home from './home'
+import Home from '../home'
 import Layers from './Layers';
 import Inferiores from './inferiores';
+import Login from '../Login';
+import Register from '../Register';
 
 import {
   Route,
@@ -18,8 +20,10 @@ const Map = () => {
       <Route path="/851" element={<Campus851 />}></Route>
       <Route path="/851/pisos-inferiores" element={<Inferiores />}></Route>
       <Route path="/:zone" element={<Layers />}></Route>
+      <Route path="/login" element={<Login />}></Route>
+      <Route path="/register" element={<Register />}></Route>
     </Routes>
   )
-}
+};
 
-export default Map
+export default Map;

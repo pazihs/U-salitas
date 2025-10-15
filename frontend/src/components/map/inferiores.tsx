@@ -1,5 +1,5 @@
 import { useState } from "react";
-import layers_icon from "../assets/layers.png"
+import layers_icon from "../../assets/layers.png";
 
 const Inferiores = () => {
     const layers: Array<string> = ["851-3", "851-2", "851-1"];
@@ -41,6 +41,6 @@ const Inferiores = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Inferiores;

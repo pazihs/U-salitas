@@ -12,7 +12,7 @@ const NavBar = ({ setClassrooms, setQuery }: NavBarProps) => {
     return (
         <nav className="navbar">
             <Search setClassrooms={setClassrooms} setQ={setQuery} />
-            <button style={{ marginRight: "15px" }}>Iniciar sesión</button>
+            <button style={{ marginRight: "15px" }} onClick={() => navigate("/register")}>Entrar</button>
             <button style={{ marginRight: "30px" }} onClick={() => navigate("/")}>Inicio</button>
         </nav>
     );

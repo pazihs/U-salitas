@@ -1,0 +1,42 @@
+form {
+  width: 30em;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.form-input {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  width: 100%;
+  line-height: 1.2;
+  /* margin-top: 0.2rem; */
+  margin-bottom: 0.4rem;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+textarea {
+  font-size: 1rem;
+  padding: 0.4rem;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+.register-button {
+  margin-top: 10px;
+  max-width: 50%;
+}
+
+.to-login-button {
+  margin-top: 10px;
+  max-width: 50%;
+  background-color: transparent;
+  color: black;
+  color: rgba(69, 25, 25, 0.87);
+}

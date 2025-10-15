@@ -8,4 +8,5 @@ export type ClassroomData = {
     likes: number;
     dislikes: number;
     image: string;
+    reviews: string[];
 };
