@@ -22,6 +22,14 @@
   border: 2px solid #af4c0f;
 }
 
+.mainContainer svg {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border: 2px solid #af4c0f;
+}
+
 .fcfm {
   height: 600px;
   width: 400px !important;
