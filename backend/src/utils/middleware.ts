@@ -58,7 +58,7 @@ export const withUser = async (
 ): Promise<void> => {
     try {
         const authReq = req;
-        const token = req.cookies?.token;
+        const token = req.cookies.token;
         if (!token) {
             res.status(401).json({ error: "missing token" });
         } else {

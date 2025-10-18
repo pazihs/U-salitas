@@ -8,7 +8,7 @@ const axiosSecure = axios.create({
 axiosSecure.interceptors.request.use((config) => {
     const csrfToken = localStorage.getItem("csrfToken");
     if (csrfToken) {
-        config.headers["X-CSRF-Token"] = csrfToken;
+        config.headers["x-csrf-token"] = csrfToken;
     }
     return config;
 });

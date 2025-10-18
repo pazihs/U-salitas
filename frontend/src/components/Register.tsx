@@ -1,6 +1,5 @@
 import { useState } from "react";
 import usersService from "../services/users";
-// import Button from "@mui/material/Button";
 import './Form.css';
 import { useNavigate } from "react-router-dom";
 
@@ -11,14 +10,6 @@ const Register = () => {
 
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const navigate = useNavigate();
-
-    // useEffect(() => {
-    //     const init = async () => {
-    //         const user = await loginService.restoreLogin();
-    //         setUser(user);
-    //     };
-    //     init();
-    // }, []);
 
     const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();

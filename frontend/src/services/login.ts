@@ -7,7 +7,7 @@ type Credentials = {
 };
 
 const login = async (credentials: Credentials) => {
-    const response = await axios.post("/api/login", credentials);
+    const response = await axios.post("/api/login", credentials, { withCredentials: true });
 
     const csrfToken = response.headers["x-csrf-token"];
 
