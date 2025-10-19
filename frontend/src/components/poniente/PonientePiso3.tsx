@@ -37,7 +37,7 @@ const PonientePiso3 = () => {
 
     return (
     <div>
-        <h1 className="center">PONIENTE</h1>
+        <h1 className="center">PISO 3 PONIENTE</h1>
 
         <div className="mainContainer">
             <svg

@@ -62,7 +62,7 @@ const Campus851 = () => {
                     style={shapeBaseStyle}
                     onMouseEnter={(e) => handleHover(e, true)}
                     onMouseLeave={(e) => handleHover(e, false)}
-                    onClick={() => routeChange("/edificio-norte")}
+                    onClick={() => routeChange("/851/norte")}
                 />
                 <path
                     d="m1920 759.81v304.19h-1521v-304.19z"

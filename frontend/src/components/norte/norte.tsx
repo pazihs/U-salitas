@@ -1,10 +1,9 @@
 import { useState, type ReactElement } from "react";
 import Levels from "../levels";
-import PonientePiso3 from "./PonientePiso3";
-import PonientePiso2 from "./PonientePiso2";
+import NortePiso3 from "./NortePiso3";
 
-const Poniente = () => {
-    const layers: Array<ReactElement> = [<PonientePiso2/>, <PonientePiso3/>];
+const Norte = () => {
+    const layers: Array<ReactElement> = [<NortePiso3/>];
     const [level, setLevel] = useState(0);
 
     return (
@@ -17,4 +16,4 @@ const Poniente = () => {
     );
 }
 
-export default Poniente;
+export default Norte;
