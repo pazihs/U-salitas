@@ -254,9 +254,6 @@ const PonientePiso2 = () => {
                 />
                 <path
                     style={{...shapeBaseStyle, cursor: "default", fill: "#4153fbff"}}
-                    onClick={() => routeChange("/auditorio-detigny")}
-                    onMouseEnter={(e) => handleHover(e, true)} 
-                    onMouseLeave={(e) => handleHover(e, false)} 
                     id="Shape 4"
                     fill-rule="evenodd"
                     className="s0"
