@@ -1,7 +1,7 @@
 import './Map.css'
 import Campus850 from './map/campus850';
 import Campus851 from './map/campus851';
-import Home from './home'
+import Home from './home';
 import Layers from './map/Layers';
 import Inferiores from './map/inferiores';
 import Poniente from './poniente/poniente';
@@ -11,13 +11,11 @@ import Register from './Register';
 
 import {
   Route,
-  BrowserRouter as Router,
   Routes,
 } from "react-router-dom";
 
 const Map = () => {
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/850" element={<Campus850 />}></Route>
@@ -29,7 +27,6 @@ const Map = () => {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
       </Routes>
-    </Router>
   )
 }
 
