@@ -1,0 +1,48 @@
+{
+    "classrooms": [
+        {
+            "id": "1",
+            "name": "B01",
+            "floor": -1,
+            "building": "851",
+            "zone": "oriente",
+            "capacity": 100,
+            "likes": 5,
+            "dislikes": 8,
+            "image": "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg"
+        },
+        {
+            "id": "2",
+            "name": "B02",
+            "floor": -1,
+            "building": "851",
+            "zone": "oriente",
+            "capacity": 100,
+            "likes": 10,
+            "dislikes": 2,
+            "image": "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg"
+        },
+        {
+            "id": "3",
+            "name": "B03",
+            "floor": -1,
+            "building": "851",
+            "zone": "oriente",
+            "capacity": 100,
+            "likes": 7,
+            "dislikes": 3,
+            "image": "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg"
+        },
+        {
+            "id": "4",
+            "name": "QO",
+            "floor": 2,
+            "building": "850",
+            "zone": "química",
+            "capacity": 80,
+            "likes": 5,
+            "dislikes": 10,
+            "image": "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg"
+        }
+    ]
+}

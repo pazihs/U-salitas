@@ -1,0 +1,52 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.card {
+  padding: 2em;
+}
+
+.navbar {
+  position: fixed;
+  width:100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #af4c0f;
+  color: #fff;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.search-results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 70px;
+}
+
+.search-title {
+  text-align: left;
+}
+
+.classrooms-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.classroom {
+  border: 2px solid #af4c0f;
+  border-radius: 20px;
+  margin: 1rem;
+  padding: 1rem;
+  width: 500px;
+  background-color: #fff;
+  align-items: center;
+  display: flex;
+}
