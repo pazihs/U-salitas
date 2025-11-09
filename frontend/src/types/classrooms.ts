@@ -7,6 +7,7 @@ export type ClassroomData = {
     capacity: number;
     likes: number;
     dislikes: number;
-    image: string;
+    inside_image: string;
+    outside_image: string;
     reviews: string[];
 };

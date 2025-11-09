@@ -3,4 +3,21 @@ GET http://localhost:3001/api/users/
 
 ###
 
-GET http://localhost:3001/api/classrooms/
+DELETE http://localhost:3001/classrooms/fcdd
+
+###
+GET http://localhost:3001/classrooms/
+
+
+###
+POST http://localhost:3001/classrooms/
+Content-Type: application/json
+
+{
+    "name": "B02",
+    "floor": -1,
+    "building": "850",
+    "zone": "química",
+    "capacity": 100,
+    "inside_image": "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg"
+}

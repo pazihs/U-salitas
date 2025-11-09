@@ -40,7 +40,8 @@ router.post("/", async (request, response, next) => {
       capacity: body.capacity,
       likes: body.likes || 0,
       dislikes: body.dislikes || 0,
-      image: body.image || "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg",
+      inside_image: body.inside_image || "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg",
+      outside_image: body.outside_image || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3ZIgXeoQeCczLd0LYl-7ejVnuU_8_IB-E6Q&s",
       reviews: body.reviews || [],
     };
 
@@ -51,7 +52,7 @@ router.post("/", async (request, response, next) => {
 });
 
 router.put("/:id", async (request, response, next) => {
-  const { name, floor, building, zone, capacity, likes, dislikes, image, reviews } = request.body;
+  const { name, floor, building, zone, capacity, likes, dislikes, inside_image, outside_image, reviews } = request.body;
 
   const classroom = await Classroom.findById(request.params.id);
 
@@ -63,7 +64,8 @@ router.put("/:id", async (request, response, next) => {
     classroom.capacity = capacity;
     classroom.likes = likes;
     classroom.dislikes = dislikes;
-    classroom.image = image;
+    classroom.inside_image = inside_image;
+    classroom.outside_image = outside_image;
     classroom.reviews = reviews;
 
     classroom.save().then((updatedClassroom) => {

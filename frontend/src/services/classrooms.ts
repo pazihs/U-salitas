@@ -7,6 +7,11 @@ const getAll = async () => {
     return request.data;
 };
 
+const getClassroom = async (id: string) => {
+    const request = await axios.get<ClassroomData>(`${baseUrl}/${id}`)
+    return request.data;
+};
+
 const create = async (newObject: ClassroomData) => {
     const request = await axios.post(baseUrl, newObject);
     return request.data;
@@ -20,6 +25,7 @@ const update = async (id: string, newObject: ClassroomData) => {
 
 export default {
     getAll,
+    getClassroom,
     create,
     update,
 };

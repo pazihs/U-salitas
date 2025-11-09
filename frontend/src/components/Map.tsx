@@ -13,6 +13,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import Classroom from './Classroom';
 
 const Map = () => {
   return (
@@ -26,6 +27,7 @@ const Map = () => {
         <Route path="/:zone" element={<Layers />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/classroom/:id" element={<Classroom />}></Route>
       </Routes>
   )
 }

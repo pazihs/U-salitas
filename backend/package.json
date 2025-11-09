@@ -13,8 +13,8 @@
     "start": "cross-env NODE_ENV=production node dist/src/index.js",
     "dev": "NODE_ENV=development ts-node-dev src/index.ts",
     "test": "NODE_ENV=test tsx --test --test-concurrency=1 tests/**/*.test.ts",
-    "build:ui": "shx rm -rf dist && cd ../frontend && npm run build && shx cp -r dist ../backend"
-  
+    "build:ui": "shx rm -rf dist && cd ../frontend && npm run build && shx cp -r dist ../backend",
+    "server": "json-server -p 3001 db.json"
   },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",

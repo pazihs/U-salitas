@@ -9,7 +9,8 @@ export interface ClassroomData {
   capacity: number;
   likes?: number;
   dislikes?: number;
-  image?: string;
+  inside_image?: string;
+  outside_image?: string;
   reviews: mongoose.Types.ObjectId[];
 }
 
@@ -25,7 +26,8 @@ const classroomSchema = new mongoose.Schema({
   capacity: { type: Number, required: true, },
   likes: { type: Number, default: 0, },
   dislikes: { type: Number, default: 0, },
-  image: { type: String, default: "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg" },
+  inside_image: { type: String, default: "https://ingenieria.uchile.cl/dam/jcr:bde4ac78-1861-446f-ab70-23cea6d8b5ec/q10-n.jpg" },
+  outside_image: { type: String, default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3ZIgXeoQeCczLd0LYl-7ejVnuU_8_IB-E6Q&s" },
   reviews: [
     {
       type: mongoose.Schema.Types.ObjectId,

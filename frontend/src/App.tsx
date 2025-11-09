@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
 import type { ClassroomData } from './types/classrooms';
-import Classroom from './components/Classroom';
+import PreviewClassroom from './components/PreviewClassroom';
 import Map from './components/Map';
 
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
             <div className="card-grid">
               {classrooms.length > 0 ? classrooms.map((item) => (
                 <div key={item.id}>
-                  <Classroom classroom={item} />
+                  <PreviewClassroom classroom={item} />
                 </div>
               )) : (
                 <h3>No se encontraron resultados</h3>

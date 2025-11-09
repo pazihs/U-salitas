@@ -16,21 +16,21 @@ const NavBar = ({ setClassrooms, setQuery }: NavBarProps) => {
     const location = useLocation();
 
     const [user, setUser] = useState<UserData | null>(null);
-    
+
     useEffect(() => {
         const init = async () => {
             const user = await loginService.restoreLogin();
             setUser(user);
         };
         init();
-         const onUserChanged = async () => {
+        const onUserChanged = async () => {
             const u = await loginService.restoreLogin();
             setUser(u);
         };
         window.addEventListener('userChanged', onUserChanged);
         return () => window.removeEventListener('userChanged', onUserChanged);
     }, [location]);
-    
+
     const isLoggedIn = user !== null;
     console.log("User in NavBar:", user);
     return (
@@ -41,7 +41,7 @@ const NavBar = ({ setClassrooms, setQuery }: NavBarProps) => {
                     loginService.logout();
                     setUser(null);
                     navigate("/", { replace: true });
-                    }}>
+                }}>
                     Cerrar sesión
                 </button>
             ) : (
