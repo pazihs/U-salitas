@@ -9,13 +9,19 @@ import loginRouter from "./controllers/login";
 import reviewRouter from "./controllers/reviews";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import { seedClassrooms } from "./utils/initDb";
 
 const app = express();
 
 mongoose.set("strictQuery", false);
 
 if (config.MONGODB_URI) {
-  mongoose.connect(config.MONGODB_URI).catch((error) => {
+  mongoose.connect(config.MONGODB_URI)
+  .then(async () => {
+    console.log("connected to MongoDB");
+    await seedClassrooms();
+  })
+  .catch((error) => {
     logger.error("error connecting to MongoDB:", error.message);
   });
 }

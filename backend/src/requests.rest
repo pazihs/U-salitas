@@ -1,3 +1,6 @@
 
-GET http://localhost:3001/classrooms/
-# Para el json-server
+GET http://localhost:3001/api/users/
+
+###
+
+GET http://localhost:3001/api/classrooms/

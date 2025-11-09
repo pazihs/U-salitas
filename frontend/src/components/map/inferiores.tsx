@@ -2,7 +2,7 @@ import { useState } from "react";
 import Levels from "../levels";
 
 const Inferiores = () => {
-    const layers: Array<string> = ["851-3", "851-2", "851-1"];
+    const layers: Array<string> = ["851-1", "851-2", "851-3"];
     const [level, setLevel] = useState(0);
 
     return (
