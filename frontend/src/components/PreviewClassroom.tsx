@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { ClassroomData } from "../types/classrooms";
 
 interface ClassroomProps {
@@ -18,7 +19,7 @@ const PreviewClassroom = ({ classroom }: ClassroomProps) => (
       <p>Piso: {classroom.floor}</p>
       <p>Capacidad: {classroom.capacity}</p>
       <div style={{ textAlign: "right", marginLeft: '60px', display: "flex", gap: "20px"  }}>
-        <a href={"/classroom/"+classroom.id}>Más información</a>
+        <Link to={`/classrooms/${classroom.id}`}>Más información</Link>
         <a href="">Ver en el mapa</a>
       </div>
     </div>

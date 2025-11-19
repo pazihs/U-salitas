@@ -1,13 +1,17 @@
 import axios from "axios";
 import axiosSecure from "../utils/axiosSecure";
 
+const baseUrl = process.env.NODE_ENV === "development"
+    ? "/api/login"
+    : "http://localhost:3001/api/login";
+
 type Credentials = {
     username: string;
     password: string;
 };
 
 const login = async (credentials: Credentials) => {
-    const response = await axios.post("/api/login", credentials, { withCredentials: true });
+    const response = await axios.post(baseUrl, credentials, { withCredentials: true });
 
     const csrfToken = response.headers["x-csrf-token"];
 
@@ -20,7 +24,7 @@ const login = async (credentials: Credentials) => {
 
 const restoreLogin = async () => {
     try {
-        const response = await axiosSecure.get("/api/login/me");
+        const response = await axiosSecure.get(`${baseUrl}/me`);
         return response.data; // Usuario logueado
     } catch {
         return null; // No logueado
@@ -28,7 +32,7 @@ const restoreLogin = async () => {
 };
 
 const logout = async () => {
-    await axios.post("/api/login/logout");
+    await axios.post(`${baseUrl}/logout`);
     localStorage.removeItem("csrfToken");
 };
 

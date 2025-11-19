@@ -1,6 +1,9 @@
 import axios from "axios";
 import type { ClassroomData } from "../types/classrooms";
-const baseUrl = "/api/classrooms";
+
+const baseUrl = process.env.NODE_ENV === "development"
+    ? "/api/classrooms"
+    : "http://localhost:3001/api/classrooms";
 
 const getAll = async () => {
     const request = await axios.get(baseUrl);
