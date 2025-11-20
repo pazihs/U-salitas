@@ -1,18 +1,35 @@
-import { useState } from 'react';
 import './App.css';
 import NavBar from './components/NavBar';
-import type { ClassroomData } from './types/classrooms';
 import AppRouter from './components/AppRouter';
+import { Alert, Snackbar } from '@mui/material';
+import { useClassroomStore } from './classroomStore';
+import SearchResult from './components/SearchResult';
 
 const App = () => {
-  const [query, setQuery] = useState<string>('');
-  const [classrooms, setClassrooms] = useState<ClassroomData[]>([]);
+  const { query, toast, setToast } = useClassroomStore();
+
+  const handleClose = () => {
+    setToast(null);
+  };
 
   return (
-    <div>
-      <NavBar setClassrooms={setClassrooms} setQuery={setQuery} />
-      <AppRouter query={query} classrooms={classrooms} />
-    </div>
+    <>
+      <Snackbar
+        open={Boolean(toast)}
+        autoHideDuration={5000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        style={{ marginTop: "60px" }}
+      >
+        <Alert severity={toast?.severity}>
+          {toast?.message}
+        </Alert>
+      </Snackbar>
+      <div>
+        <NavBar />
+        {query.length > 0 ? <SearchResult /> : <AppRouter />}
+      </div>
+    </>
   );
 }
 

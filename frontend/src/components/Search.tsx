@@ -2,24 +2,25 @@
 import { useEffect, useState } from "react";
 import type { ClassroomData } from "../types/classrooms";
 import { search } from "../services/search";
-import classroomService from "../services/classrooms";
+import classrooms from "../services/classrooms";
+import { useClassroomStore } from "../classroomStore";
+import { useLocation } from "react-router-dom";
 
-type SearchProps = {
-    setClassrooms: React.Dispatch<React.SetStateAction<ClassroomData[]>>;
-    setQ: React.Dispatch<React.SetStateAction<string>>;
-};
 
-function Search({ setClassrooms, setQ }: SearchProps) {
+function Search() {
     const [error, setError] = useState<Error | null>(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState<ClassroomData[]>([]);
-    const [query, setQuery] = useState("");
+    const [q, setQ] = useState("");
+    const location = useLocation();
+
+    const { setClassrooms, setQuery } = useClassroomStore();
 
     // Campos a buscar
     const [searchParam] = useState(["name", "zone", "capacity", "building"]);
 
     useEffect(() => {
-        classroomService.getAll().then(
+        classrooms.getAll().then(
             (result) => {
                 setIsLoaded(true);
                 setItems(result);
@@ -30,6 +31,10 @@ function Search({ setClassrooms, setQ }: SearchProps) {
             }
         );
     }, []);
+
+    useEffect(() => {
+        setQ('');
+    }, [location])
 
     if (error instanceof Error) {
         return <div>Error: {error.message}</div>;
@@ -47,10 +52,10 @@ function Search({ setClassrooms, setQ }: SearchProps) {
                             id="search-form"
                             className="search-input"
                             placeholder="Sala, edificio, zona..."
-                            value={query}
+                            value={q}
                             onChange={(e) => {
-                                setQuery(e.target.value);
                                 setQ(e.target.value);
+                                setQuery(e.target.value);
                                 setClassrooms(search(items, e.target.value, searchParam));
                             }}
                         />

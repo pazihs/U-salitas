@@ -181,8 +181,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 64,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B204",
@@ -190,8 +190,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 128,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B205",
@@ -199,8 +199,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 64,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B206",
@@ -208,8 +208,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 26,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B206",
@@ -217,8 +217,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 26,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B208",
@@ -226,8 +226,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 21,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B210",
@@ -235,8 +235,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 26,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B211",
@@ -244,8 +244,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 26,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B212",
@@ -253,8 +253,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 100,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B213",
@@ -262,8 +262,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 64,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B206",
@@ -271,8 +271,8 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 26,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
     {
         name: "B214",
@@ -280,7 +280,7 @@ export const classrooms = [
         building: "851",
         zone: "Norte",
         capacity: 22,
-        likes: 0,
-        dislikes: 0
+        likes: [],
+        dislikes: []
     },
 ];

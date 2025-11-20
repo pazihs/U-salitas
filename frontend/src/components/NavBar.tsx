@@ -1,26 +1,21 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import type { ClassroomData } from "../types/classrooms";
 import Search from "./Search";
-import { useEffect, useState } from "react";
-import type { UserData } from "../types/users";
+import { useEffect } from "react";
 import loginService from "../services/login";
+import { useClassroomStore } from "../classroomStore";
 
 
-type NavBarProps = {
-    setClassrooms: React.Dispatch<React.SetStateAction<ClassroomData[]>>;
-    setQuery: React.Dispatch<React.SetStateAction<string>>;
-};
-
-const NavBar = ({ setClassrooms, setQuery }: NavBarProps) => {
+const NavBar = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const [user, setUser] = useState<UserData | null>(null);
+    const { user, setUser, setQuery } = useClassroomStore();
 
     useEffect(() => {
         const init = async () => {
             const user = await loginService.restoreLogin();
             setUser(user);
+            setQuery('');
         };
         init();
         const onUserChanged = async () => {
@@ -35,7 +30,7 @@ const NavBar = ({ setClassrooms, setQuery }: NavBarProps) => {
     console.log("User in NavBar:", user);
     return (
         <nav className="navbar">
-            <Search setClassrooms={setClassrooms} setQ={setQuery} />
+            <Search />
             {isLoggedIn ? (
                 <button style={{ marginRight: "15px" }} onClick={() => {
                     loginService.logout();

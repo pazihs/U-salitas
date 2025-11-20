@@ -6,7 +6,7 @@ interface ClassroomProps {
 }
 
 const PreviewClassroom = ({ classroom }: ClassroomProps) => (
-  <div className="classroom">
+  <div className="preview-classroom">
     <div style={{
       marginRight: '10px',
       position: "relative",

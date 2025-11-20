@@ -26,9 +26,35 @@ const update = async (id: string, newObject: ClassroomData) => {
     return request.data;
 };
 
+const addLike = async (classroomId: string, userId: string) => {
+    const newObject = await getClassroom(classroomId);
+    update(classroomId, { ...newObject, likes: newObject.likes.concat(userId) });
+};
+
+const addDislike = async (classroomId: string, userId: string) => {
+    const newObject = await getClassroom(classroomId);
+    update(classroomId, { ...newObject, likes: newObject.dislikes.concat(userId) });
+};
+
+const removeLike = async (classroomId: string, userId: string) => {
+    const newObject = await getClassroom(classroomId);
+    const index = newObject.likes.indexOf(userId);
+    update(classroomId, { ...newObject, likes: newObject.likes.splice(index, 1) });
+};
+
+const removeDislike = async (classroomId: string, userId: string) => {
+    const newObject = await getClassroom(classroomId);
+    const index = newObject.likes.indexOf(userId);
+    update(classroomId, { ...newObject, likes: newObject.dislikes.splice(index, 1) });
+};
+
 export default {
     getAll,
     getClassroom,
     create,
     update,
+    addLike,
+    addDislike,
+    removeLike,
+    removeDislike
 };

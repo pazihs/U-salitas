@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import loginService from "../services/login";
-import type { UserData } from "../types/users";
 import './Form.css';
 import { useNavigate } from "react-router-dom";
+import { useClassroomStore } from "../classroomStore";
+
 
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [user, setUser] = useState<UserData | null>(null);
 
-    const [errorMessage, setErrorMessage] = useState<string | null>(null);
+    const { user, setUser, setToast } = useClassroomStore();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -34,10 +34,7 @@ const Login = () => {
             window.dispatchEvent(new Event('userChanged'));
             navigate("/", { replace: true });
         } catch (exception) {
-            setErrorMessage("Wrong credentials");
-            setTimeout(() => {
-                setErrorMessage(null);
-            }, 5000);
+            setToast({ message: 'Error al iniciar sesión: credenciales inválidas', severity: 'error' })
         }
     };
 
@@ -49,7 +46,6 @@ const Login = () => {
     return (
         <div style={{ marginTop: 70, alignItems: "center", display: "flex", flexDirection: "column" }}>
             <h1 style={{ textAlign: "center" }}>Iniciar sesión</h1>
-            <p style={{ color: "red" }}>{errorMessage}</p>
             {!user ?
                 (<form style={{ display: "flex", flexDirection: "column", alignItems: "center", maxWidth: 600 }} onSubmit={handleLogin}>
                     <div>
@@ -77,7 +73,6 @@ const Login = () => {
                     <button
                         className="register-button"
                         type="submit"
-                        onClick={() => navigate("/", { replace: true })}
                     >
                         Iniciar Sesión
                     </button>
