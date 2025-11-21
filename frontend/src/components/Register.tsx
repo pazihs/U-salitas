@@ -1,6 +1,6 @@
 import { useState } from "react";
 import usersService from "../services/users";
-import './Form.css';
+import './form.css';
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
@@ -36,34 +36,35 @@ const Register = () => {
             <p style={{ color: "red" }}>{errorMessage}</p>
             <form style={{ display: "flex", flexDirection: "column", alignItems: "center", maxWidth: 600 }} onSubmit={handleRegister}>
                 <div>
-                    <label>Nombre de usuario</label>
+                    <label style={{textAlign: "center"}}>Nombre de usuario</label>
                     <input
                         className="form-input"
                         type="text"
                         id="username"
                         name="username"
-                        placeholder="Your username.."
+                        placeholder="Tu usuario"
                         value={username}
                         onChange={({ target }) => setUsername(target.value)}>
                     </input>
 
-                    <label>Correo electrónico</label>
+                    <label style={{textAlign: "center"}}>Correo electrónico</label>
                     <input
                         className="form-input"
                         type="text"
                         id="email"
                         name="email"
-                        placeholder="Your email.."
+                        placeholder="Tu email"
                         value={email} onChange={({ target }) => setEmail(target.value)}>
                     </input>
 
-                    <label>Contraseña</label>
+                    <label style={{textAlign: "center"}}>Contraseña</label>
                     <input
                         className="form-input"
                         type="password"
+                        style={{ borderRadius: 10,  borderColor: "rgba(69, 25, 25, 0.87)"}}
                         id="password"
                         name="password"
-                        placeholder="Your password.."
+                        placeholder="Tu contraseña"
                         value={password} onChange={({ target }) => setPassword(target.value)}>
                     </input>
                 </div>

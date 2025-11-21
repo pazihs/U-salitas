@@ -30,6 +30,7 @@ const NavBar = () => {
     console.log("User in NavBar:", user);
     return (
         <nav className="navbar">
+            <button className="usalitas-button" onClick={() => navigate("/")}/>
             <Search />
             {isLoggedIn ? (
                 <button style={{ marginRight: "15px" }} onClick={() => {
@@ -40,11 +41,10 @@ const NavBar = () => {
                     Cerrar sesión
                 </button>
             ) : (
-                <button style={{ marginRight: "15px" }} onClick={() => navigate("/login")}>
+                <button style={{ marginRight: "30px" }} onClick={() => navigate("/login")}>
                     Entrar
                 </button>
             )}
-            <button style={{ marginRight: "30px" }} onClick={() => navigate("/")}>Inicio</button>
         </nav>
     );
 };

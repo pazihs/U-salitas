@@ -16,7 +16,7 @@
 
 .mainContainer img{
   width: 100%;
-  max-width: 800px;
+  max-width: 1080px;
   aspect-ratio: 16/9;
   overflow: hidden;
   border: 2px solid #af4c0f;
@@ -24,7 +24,7 @@
 
 .mainContainer svg {
   width: 100%;
-  max-width: 800px;
+  max-width: 1080px;
   aspect-ratio: 16/9;
   overflow: hidden;
   border: 2px solid #af4c0f;

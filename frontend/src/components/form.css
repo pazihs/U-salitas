@@ -19,6 +19,8 @@ label {
   margin-bottom: 0.4rem;
   background-color: rgb(255, 255, 255);
   color: black;
+  border-radius: 10px;
+  border-color: rgba(69, 25, 25, 0.87);
 }
 
 textarea {

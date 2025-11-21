@@ -11,7 +11,7 @@ const PonientePiso3 = () => {
     };
 
     const shapeBaseStyle = {
-        fill: "#98de5d",
+        fill: "#AF4C0F",
         cursor: "pointer",
         transition: "all 0.25s ease",
         transformOrigin: "center",
@@ -28,10 +28,10 @@ const PonientePiso3 = () => {
 
     const handleHover = (e: React.MouseEvent<SVGPathElement>, isHover: boolean) => {
         const shape = e.currentTarget;
-        shape.style.fill = isHover ? "#7cd957" : "#98de5d";
+        shape.style.fill = isHover ? "#e86718" : "#AF4C0F";
         shape.style.transform = isHover ? "scale(1.02)" : "scale(1)";
         shape.style.filter = isHover
-            ? "drop-shadow(0 0 10px #7cd957)"
+            ? "drop-shadow(0 0 10px #e86718)"
             : "drop-shadow(0 0 0 transparent)";
     };
 
@@ -272,7 +272,7 @@ const PonientePiso3 = () => {
                     fill-rule="evenodd" 
                     className="s0" 
                     d="m1083.83 553.8c-44.2 0-79.93-36.03-79.93-80.6 0-44.57 35.73-80.6 79.93-80.6 44.2 0 79.93 36.03 79.93 80.6 0 44.57-35.73 80.6-79.93 80.6z"
-                    style={{...shapeBaseStyle, cursor: "default", fill: "#4153fbff"}}
+                    style={{...shapeBaseStyle, cursor: "default"}}
                 />
                 <path
                     onClick={() => routeChange("/auditorio-detigny")}

@@ -5,13 +5,13 @@ const Campus851 = () => {
     const routeChange = (path: string) => navigate(path);
 
     const svgStyle = {
-        width: "100%",
+        width: "150%",
         height: "auto",
         display: "block",
     };
 
     const shapeBaseStyle = {
-        fill: "#98de5d",
+        fill: "#AF4C0F",
         cursor: "pointer",
         transition: "all 0.25s ease",
         transformOrigin: "center",
@@ -28,10 +28,10 @@ const Campus851 = () => {
 
     const handleHover = (e: React.MouseEvent<SVGPathElement>, isHover: boolean) => {
         const shape = e.currentTarget;
-        shape.style.fill = isHover ? "#7cd957" : "#98de5d";
+        shape.style.fill = isHover ? "#e86718" : "#AF4C0F";
         shape.style.transform = isHover ? "scale(1.02)" : "scale(1)";
         shape.style.filter = isHover
-            ? "drop-shadow(0 0 10px #7cd957)"
+            ? "drop-shadow(0 0 10px #e86718)"
             : "drop-shadow(0 0 0 transparent)";
     };
 
@@ -39,7 +39,7 @@ const Campus851 = () => {
     <div>
         <h1 className="center">851</h1>
 
-        <div style={{ maxWidth: "1920px" }} className="mainContainer">
+        <div className="mainContainer">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1920 1080"

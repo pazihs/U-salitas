@@ -11,7 +11,7 @@ const NortePiso3 = () => {
     };
 
     const shapeBaseStyle = {
-        fill: "#98de5d",
+        fill: "#AF4C0F",
         cursor: "pointer",
         transition: "all 0.25s ease",
         transformOrigin: "center",
@@ -28,10 +28,10 @@ const NortePiso3 = () => {
 
     const handleHover = (e: React.MouseEvent<SVGPathElement>, isHover: boolean) => {
         const shape = e.currentTarget;
-        shape.style.fill = isHover ? "#7cd957" : "#98de5d";
+        shape.style.fill = isHover ? "#e86718" : "#AF4C0F";
         shape.style.transform = isHover ? "scale(1.02)" : "scale(1)";
         shape.style.filter = isHover
-            ? "drop-shadow(0 0 10px #7cd957)"
+            ? "drop-shadow(0 0 10px #e86718)"
             : "drop-shadow(0 0 0 transparent)";
     };
 
