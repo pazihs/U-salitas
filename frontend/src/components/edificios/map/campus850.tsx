@@ -1,4 +1,4 @@
-import image850 from '../../assets/850.jpg';
+import image850 from '../../../assets/850.jpg';
 
 const Campus850 = () => {
     return (

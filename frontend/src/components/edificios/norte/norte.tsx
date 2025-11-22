@@ -1,5 +1,5 @@
 import { useState, type ReactElement } from "react";
-import Levels from "../levels";
+import Levels from "../Levels";
 import NortePiso3 from "./NortePiso3";
 
 const Norte = () => {

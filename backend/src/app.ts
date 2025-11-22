@@ -10,6 +10,7 @@ import reviewRouter from "./controllers/reviews";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { seedClassrooms } from "./utils/initDb";
+import path from "path"
 
 const app = express();
 
@@ -41,6 +42,9 @@ app.use("/api/classrooms", classroomsRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/reviews", reviewRouter);
+app.get(/^(?!\/api).*/, (req, res) => {
+  res.sendFile(path.resolve("dist/index.html"));
+});
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);

@@ -1,11 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import Campus850 from './map/campus850';
-import Campus851 from './map/campus851';
+import Campus850 from './edificios/map/campus850';
+import Campus851 from './edificios/map/campus851';
 import Home from './home';
-import Layers from './map/Layers';
-import Inferiores from './map/inferiores';
-import Poniente from './poniente/poniente';
-import Norte from './norte/norte';
+import Inferiores from './edificios/inferiores/inferiores';
+import Poniente from './edificios/poniente/poniente';
+import Norte from './edificios/norte/norte';
 import Login from './Login';
 import Register from './Register';
 import Classroom from './Classroom';
@@ -20,7 +19,6 @@ const AppRouter = () => (
     <Route path="/851/pisos-inferiores" element={<Inferiores />} />
     <Route path="/851/poniente" element={<Poniente />} />
     <Route path="/851/norte" element={<Norte />} />
-    <Route path="/:zone" element={<Layers />} />
     <Route path="/login" element={<Login />} />
     <Route path="/register" element={<Register />} />
     <Route path="/classrooms/:id" element={<Classroom />} />

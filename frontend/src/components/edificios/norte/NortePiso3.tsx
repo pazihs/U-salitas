@@ -1,44 +1,13 @@
 import { useNavigate } from "react-router-dom";
+import { svgStyle, shapeBaseStyle, textStyle, handleHover } from "../styles"
 
 const NortePiso3 = () => {
     const navigate = useNavigate();
     const routeChange = (path: string) => navigate(path);
 
-    const svgStyle = {
-        width: "100%",
-        height: "auto",
-        display: "block",
-    };
-
-    const shapeBaseStyle = {
-        fill: "#AF4C0F",
-        cursor: "pointer",
-        transition: "all 0.25s ease",
-        transformOrigin: "center",
-    };
-
-    const textStyle = {
-        fontSize: 25,
-        fill: "#ffffff",
-        fontFamily: '"DejaVu Sans", sans-serif',
-        fontWeight: 400,
-        userSelect: "none" as const,
-        pointerEvents: "none" as const,
-    };
-
-    const handleHover = (e: React.MouseEvent<SVGPathElement>, isHover: boolean) => {
-        const shape = e.currentTarget;
-        shape.style.fill = isHover ? "#e86718" : "#AF4C0F";
-        shape.style.transform = isHover ? "scale(1.02)" : "scale(1)";
-        shape.style.filter = isHover
-            ? "drop-shadow(0 0 10px #e86718)"
-            : "drop-shadow(0 0 0 transparent)";
-    };
-
     return (
     <div>
         <h1 className="center">PISO 3 NORTE</h1>
-        
         <svg 
             version="1.2" 
             xmlns="http://www.w3.org/2000/svg" 
@@ -46,10 +15,19 @@ const NortePiso3 = () => {
             width="1920" 
             height="1080"
             style={svgStyle}
-        >
+        >	        
             <defs>
                 <image  width="2608" height="1113" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAACjAAAARZAQMAAABU10nBAAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAACVlJREFUeJzt0AEJADAMwLDPv+mbCAxGo6B0XoDZDrihjUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPRRqKNRBuJNhJtJNpItJFoI9FGoo1EG4k2Em0k2ki0kWgj0UaijUQbiTYSbSTaSLSRaCPxAYkHBFpLYV69AAAAAElFTkSuQmCC"/>
             </defs>
+            <style>{`
+                tspan { white-space:pre } 
+                .s0 { fill: #8cf773 } 
+                .t1 { font-size: 24px;fill: #ffffff;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+                .t2 { font-size: 30px;fill: #ffffff;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+                .t3 { font-size: 28px;fill: #ffffff;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+                .t4 { font-size: 22px;fill: #ffffff;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+                .t5 { font-size: 18px;fill: #ffffff;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+            `}</style>
             <use id="Layer 1" href="#img1" x="-362" y="-24"/>
             <path
                 onClick={() => routeChange("/auditorio-detigny")}
@@ -72,30 +50,21 @@ const NortePiso3 = () => {
                 d="m1908.37 772.92v149.11h-123.91v-149.11z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 42" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1260.38 606.28v91.75l-119.14-0.34v-91.75z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 40" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1260.49 481.01v122.86h-119.7v-122.86z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 39" 
                 fill-rule="evenodd" 
                 className="s0" 
@@ -142,10 +111,7 @@ const NortePiso3 = () => {
                 d="m723.13 364.46v173.25h-235.71v-173.25z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 34" 
                 fill-rule="evenodd" 
                 className="s0" 
@@ -452,181 +418,181 @@ const NortePiso3 = () => {
                 d="m423.61 358.16v179.55h-411.61v-179.55z"
             />
             <text id="OFISALITA" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,389.631,219.387)"}} >
-                <tspan x="-60.8" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">I</tspan><tspan  y="0" className="t1">S</tspan><tspan  y="0" className="t1">A</tspan><tspan  y="0" className="t1">L</tspan><tspan  y="0" className="t1">I</tspan><tspan  y="0" className="t1">T</tspan><tspan  y="0" className="t1">A
+                <tspan x="-60.8" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">I</tspan><tspan  y="0"className="t1">S</tspan><tspan  y="0"className="t1">A</tspan><tspan  y="0"className="t1">L</tspan><tspan  y="0"className="t1">I</tspan><tspan  y="0"className="t1">T</tspan><tspan  y="0"className="t1">A
         </tspan>
             </text>
             <text id="DIRECCION" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,1746.661,253.154)"}} >
-                <tspan x="-84.3" y="0" className="t2">DIRECCION
+                <tspan x="-84.3" y="0"className="t2">DIRECCION
         </tspan>
             </text>
             <text id="OF. 331" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,504.085,219.387)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1
         </tspan>
             </text>
             <text id="SALA 341" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,1402.249,439.01)"}} >
-                <tspan x="-36.4" y="0" className="t3">S</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">L</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">
+                <tspan x="-36.4" y="0"className="t3">S</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">L</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">
         </tspan>
-                <tspan x="-26.7" y="33.6" className="t3">3</tspan><tspan  y="33.6" className="t3">4</tspan><tspan  y="33.6" className="t3">1</tspan><tspan  y="33.6" className="t3">
+                <tspan x="-26.7" y="33.6"className="t3">3</tspan><tspan  y="33.6"className="t3">4</tspan><tspan  y="33.6"className="t3">1</tspan><tspan  y="33.6"className="t3">
         </tspan>
             </text>
             <text id="SALA 342" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,1402.249,608.066)"}} >
-                <tspan x="-36.4" y="0" className="t3">S</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">L</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">
+                <tspan x="-36.4" y="0"className="t3">S</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">L</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">
         </tspan>
-                <tspan x="-26.7" y="33.6" className="t3">3</tspan><tspan  y="33.6" className="t3">4</tspan><tspan  y="33.6" className="t3">2</tspan><tspan  y="33.6" className="t3">
+                <tspan x="-26.7" y="33.6"className="t3">3</tspan><tspan  y="33.6"className="t3">4</tspan><tspan  y="33.6"className="t3">2</tspan><tspan  y="33.6"className="t3">
         </tspan>
             </text>
             <text id="COCINA" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1308.504,416.437)"}} >
-                <tspan x="-46.9" y="0" className="t1">C</tspan><tspan  y="0" className="t1">O</tspan><tspan  y="0" className="t1">C</tspan><tspan  y="0" className="t1">I</tspan><tspan  y="0" className="t1">N</tspan><tspan  y="0" className="t1">A
+                <tspan x="-46.9" y="0"className="t1">C</tspan><tspan  y="0"className="t1">O</tspan><tspan  y="0"className="t1">C</tspan><tspan  y="0"className="t1">I</tspan><tspan  y="0"className="t1">N</tspan><tspan  y="0"className="t1">A
         </tspan>
             </text>
             <text id="OF. 318" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1858.482,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">8
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">8
         </tspan>
             </text>
             <text id="OF. 317" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1744.028,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">7</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">7</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 316" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1640.074,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">6</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">6</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 315" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1537.171,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">5</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">5</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 314" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1432.167,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">4</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">4</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 313" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1329.263,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 312" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1226.36,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 311" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1123.456,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 310" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1020.552,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">1</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">1</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 309" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,916.599,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">9</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">9</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 308" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,814.745,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">8</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">8</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 307" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,712.891,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">7</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">7</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 306" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,607.888,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">6</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">6</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 305" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,503.934,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">5</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">5</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 304" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,399.98,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">4</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">4</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 303" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,298.127,851.153)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="BAÑO MUJERES" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,1200.642,538.764)"}} >
-                <tspan x="-32" y="0" className="t4">B</tspan><tspan  y="0" className="t4">A</tspan><tspan  y="0" className="t4">Ñ</tspan><tspan  y="0" className="t4">O</tspan><tspan  y="0" className="t4">
+                <tspan x="-32" y="0"className="t4">B</tspan><tspan  y="0"className="t4">A</tspan><tspan  y="0"className="t4">Ñ</tspan><tspan  y="0"className="t4">O</tspan><tspan  y="0"className="t4">
         </tspan>
-                <tspan x="-49.3" y="26.4" className="t4">M</tspan><tspan  y="26.4" className="t4">U</tspan><tspan  y="26.4" className="t4">J</tspan><tspan  y="26.4" className="t4">E</tspan><tspan  y="26.4" className="t4">R</tspan><tspan  y="26.4" className="t4">E</tspan><tspan  y="26.4" className="t4">S</tspan><tspan  y="26.4" className="t4">
+                <tspan x="-49.3" y="26.4"className="t4">M</tspan><tspan  y="26.4"className="t4">U</tspan><tspan  y="26.4"className="t4">J</tspan><tspan  y="26.4"className="t4">E</tspan><tspan  y="26.4"className="t4">R</tspan><tspan  y="26.4"className="t4">E</tspan><tspan  y="26.4"className="t4">S</tspan><tspan  y="26.4"className="t4">
         </tspan>
             </text>
             <text id="BAÑO UNIVERSAL" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,1201.29,649.018)"}} >
-                <tspan x="-26.1" y="0" className="t5">B</tspan><tspan  y="0" className="t5">A</tspan><tspan  y="0" className="t5">Ñ</tspan><tspan  y="0" className="t5">O</tspan><tspan  y="0" className="t5">
+                <tspan x="-26.1" y="0"className="t5">B</tspan><tspan  y="0"className="t5">A</tspan><tspan  y="0"className="t5">Ñ</tspan><tspan  y="0"className="t5">O</tspan><tspan  y="0"className="t5">
         </tspan>
-                <tspan x="-51.1" y="21.6" className="t5">U</tspan><tspan  y="21.6" className="t5">N</tspan><tspan  y="21.6" className="t5">I</tspan><tspan  y="21.6" className="t5">V</tspan><tspan  y="21.6" className="t5">E</tspan><tspan  y="21.6" className="t5">R</tspan><tspan  y="21.6" className="t5">S</tspan><tspan  y="21.6" className="t5">A</tspan><tspan  y="21.6" className="t5">L</tspan><tspan  y="21.6" className="t5">
+                <tspan x="-51.1" y="21.6"className="t5">U</tspan><tspan  y="21.6"className="t5">N</tspan><tspan  y="21.6"className="t5">I</tspan><tspan  y="21.6"className="t5">V</tspan><tspan  y="21.6"className="t5">E</tspan><tspan  y="21.6"className="t5">R</tspan><tspan  y="21.6"className="t5">S</tspan><tspan  y="21.6"className="t5">A</tspan><tspan  y="21.6"className="t5">L</tspan><tspan  y="21.6"className="t5">
         </tspan>
             </text>
             <text id="OF. 330" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,608.039,219.387)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">0</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">0</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="SALA FUNDADORES" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,606.321,444.261)"}} >
-                <tspan x="-36.4" y="0" className="t3">S</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">L</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">
+                <tspan x="-36.4" y="0"className="t3">S</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">L</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">
         </tspan>
-                <tspan x="-98.1" y="33.6" className="t3">F</tspan><tspan  y="33.6" className="t3">U</tspan><tspan  y="33.6" className="t3">N</tspan><tspan  y="33.6" className="t3">D</tspan><tspan  y="33.6" className="t3">A</tspan><tspan  y="33.6" className="t3">D</tspan><tspan  y="33.6" className="t3">O</tspan><tspan  y="33.6" className="t3">R</tspan><tspan  y="33.6" className="t3">E</tspan><tspan  y="33.6" className="t3">S</tspan><tspan  y="33.6" className="t3">
+                <tspan x="-98.1" y="33.6"className="t3">F</tspan><tspan  y="33.6"className="t3">U</tspan><tspan  y="33.6"className="t3">N</tspan><tspan  y="33.6"className="t3">D</tspan><tspan  y="33.6"className="t3">A</tspan><tspan  y="33.6"className="t3">D</tspan><tspan  y="33.6"className="t3">O</tspan><tspan  y="33.6"className="t3">R</tspan><tspan  y="33.6"className="t3">E</tspan><tspan  y="33.6"className="t3">S</tspan><tspan  y="33.6"className="t3">
         </tspan>
             </text>
             <text id="BAÑO HOMBRES" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,807.928,467.361)"}} >
-                <tspan x="-40.7" y="0" className="t3">B</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">Ñ</tspan><tspan  y="0" className="t3">O</tspan><tspan  y="0" className="t3">
+                <tspan x="-40.7" y="0"className="t3">B</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">Ñ</tspan><tspan  y="0"className="t3">O</tspan><tspan  y="0"className="t3">
         </tspan>
-                <tspan x="-70.7" y="33.6" className="t3">H</tspan><tspan  y="33.6" className="t3">O</tspan><tspan  y="33.6" className="t3">M</tspan><tspan  y="33.6" className="t3">B</tspan><tspan  y="33.6" className="t3">R</tspan><tspan  y="33.6" className="t3">E</tspan><tspan  y="33.6" className="t3">S</tspan><tspan  y="33.6" className="t3">
+                <tspan x="-70.7" y="33.6"className="t3">H</tspan><tspan  y="33.6"className="t3">O</tspan><tspan  y="33.6"className="t3">M</tspan><tspan  y="33.6"className="t3">B</tspan><tspan  y="33.6"className="t3">R</tspan><tspan  y="33.6"className="t3">E</tspan><tspan  y="33.6"className="t3">S</tspan><tspan  y="33.6"className="t3">
         </tspan>
             </text>
             <text id="SALA EFRAIN" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,606.321,612.266)"}} >
-                <tspan x="-36.4" y="0" className="t3">S</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">L</tspan><tspan  y="0" className="t3">A</tspan><tspan  y="0" className="t3">
+                <tspan x="-36.4" y="0"className="t3">S</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">L</tspan><tspan  y="0"className="t3">A</tspan><tspan  y="0"className="t3">
         </tspan>
-                <tspan x="-50.2" y="33.6" className="t3">E</tspan><tspan  y="33.6" className="t3">F</tspan><tspan  y="33.6" className="t3">R</tspan><tspan  y="33.6" className="t3">A</tspan><tspan  y="33.6" className="t3">I</tspan><tspan  y="33.6" className="t3">N</tspan><tspan  y="33.6" className="t3">
+                <tspan x="-50.2" y="33.6"className="t3">E</tspan><tspan  y="33.6"className="t3">F</tspan><tspan  y="33.6"className="t3">R</tspan><tspan  y="33.6"className="t3">A</tspan><tspan  y="33.6"className="t3">I</tspan><tspan  y="33.6"className="t3">N</tspan><tspan  y="33.6"className="t3">
         </tspan>
             </text>
             <text id="OF. 329" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,710.942,219.387)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">9</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">9</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 328" style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,814.896,219.387)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">8</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">8</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="LABORATORIO LORENZO" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,216.757,464.211)"}} >
-                <tspan x="-184.9" y="0" className="t2">L</tspan><tspan  y="0" className="t2">A</tspan><tspan  y="0" className="t2">B</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2">R</tspan><tspan  y="0" className="t2">A</tspan><tspan  y="0" className="t2">T</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2">R</tspan><tspan  y="0" className="t2">I</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2"> </tspan><tspan  y="0" className="t2">L</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2">R</tspan><tspan  y="0" className="t2">E</tspan><tspan  y="0" className="t2">N</tspan><tspan  y="0" className="t2">Z</tspan><tspan  y="0" className="t2">O
+                <tspan x="-184.9" y="0"className="t2">L</tspan><tspan  y="0"className="t2">A</tspan><tspan  y="0"className="t2">B</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2">R</tspan><tspan  y="0"className="t2">A</tspan><tspan  y="0"className="t2">T</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2">R</tspan><tspan  y="0"className="t2">I</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2"> </tspan><tspan  y="0"className="t2">L</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2">R</tspan><tspan  y="0"className="t2">E</tspan><tspan  y="0"className="t2">N</tspan><tspan  y="0"className="t2">Z</tspan><tspan  y="0"className="t2">O
         </tspan>
             </text>
             <text id="LABORATORIO DICHATO" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,216.757,636.417)"}} >
-                <tspan x="-179.9" y="0" className="t2">L</tspan><tspan  y="0" className="t2">A</tspan><tspan  y="0" className="t2">B</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2">R</tspan><tspan  y="0" className="t2">A</tspan><tspan  y="0" className="t2">T</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2">R</tspan><tspan  y="0" className="t2">I</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2"> </tspan><tspan  y="0" className="t2">D</tspan><tspan  y="0" className="t2">I</tspan><tspan  y="0" className="t2">C</tspan><tspan  y="0" className="t2">H</tspan><tspan  y="0" className="t2">A</tspan><tspan  y="0" className="t2">T</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2">
+                <tspan x="-179.9" y="0"className="t2">L</tspan><tspan  y="0"className="t2">A</tspan><tspan  y="0"className="t2">B</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2">R</tspan><tspan  y="0"className="t2">A</tspan><tspan  y="0"className="t2">T</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2">R</tspan><tspan  y="0"className="t2">I</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2"> </tspan><tspan  y="0"className="t2">D</tspan><tspan  y="0"className="t2">I</tspan><tspan  y="0"className="t2">C</tspan><tspan  y="0"className="t2">H</tspan><tspan  y="0"className="t2">A</tspan><tspan  y="0"className="t2">T</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2">
         </tspan>
             </text>
             <text id="OF. 327 " style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,934.6,209.937)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">7</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">7</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 325 " style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1181.359,209.937)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">5</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">5</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 324 " style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1294.763,209.937)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">4</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">4</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 323 " style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1396.616,209.937)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 322 " style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1517.371,209.937)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="OF. 326 " style={{...textStyle, transform: "matrix(0,-1.05,1.05,0,1059.555,209.937)"}} >
-                <tspan x="-45" y="0" className="t1">O</tspan><tspan  y="0" className="t1">F</tspan><tspan  y="0" className="t1">.</tspan><tspan  y="0" className="t1"> </tspan><tspan  y="0" className="t1">3</tspan><tspan  y="0" className="t1">2</tspan><tspan  y="0" className="t1">6</tspan><tspan  y="0" className="t1">
+                <tspan x="-45" y="0"className="t1">O</tspan><tspan  y="0"className="t1">F</tspan><tspan  y="0"className="t1">.</tspan><tspan  y="0"className="t1"> </tspan><tspan  y="0"className="t1">3</tspan><tspan  y="0"className="t1">2</tspan><tspan  y="0"className="t1">6</tspan><tspan  y="0"className="t1">
         </tspan>
             </text>
             <text id="SALITA" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,198.907,231.103)"}} >
-                <tspan x="-51.1" y="0" className="t2">S</tspan><tspan  y="0" className="t2">A</tspan><tspan  y="0" className="t2">L</tspan><tspan  y="0" className="t2">I</tspan><tspan  y="0" className="t2">T</tspan><tspan  y="0" className="t2">A
+                <tspan x="-51.1" y="0"className="t2">S</tspan><tspan  y="0"className="t2">A</tspan><tspan  y="0"className="t2">L</tspan><tspan  y="0"className="t2">I</tspan><tspan  y="0"className="t2">T</tspan><tspan  y="0"className="t2">A
         </tspan>
             </text>
             <text id="AUDITORIO RAMON PICARTE" style={{...textStyle, transform: "matrix(1.05,0,0,1.05,1720.41,503.063)"}} >
-                <tspan x="-84.8" y="0" className="t2">A</tspan><tspan  y="0" className="t2">U</tspan><tspan  y="0" className="t2">D</tspan><tspan  y="0" className="t2">I</tspan><tspan  y="0" className="t2">T</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2">R</tspan><tspan  y="0" className="t2">I</tspan><tspan  y="0" className="t2">O</tspan><tspan  y="0" className="t2">
+                <tspan x="-84.8" y="0"className="t2">A</tspan><tspan  y="0"className="t2">U</tspan><tspan  y="0"className="t2">D</tspan><tspan  y="0"className="t2">I</tspan><tspan  y="0"className="t2">T</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2">R</tspan><tspan  y="0"className="t2">I</tspan><tspan  y="0"className="t2">O</tspan><tspan  y="0"className="t2">
         </tspan>
-                <tspan x="-56" y="36" className="t2">R</tspan><tspan  y="36" className="t2">A</tspan><tspan  y="36" className="t2">M</tspan><tspan  y="36" className="t2">O</tspan><tspan  y="36" className="t2">N</tspan><tspan  y="36" className="t2">
+                <tspan x="-56" y="36"className="t2">R</tspan><tspan  y="36"className="t2">A</tspan><tspan  y="36"className="t2">M</tspan><tspan  y="36"className="t2">O</tspan><tspan  y="36"className="t2">N</tspan><tspan  y="36"className="t2">
         </tspan>
-                <tspan x="-62.2" y="72" className="t2">P</tspan><tspan  y="72" className="t2">I</tspan><tspan  y="72" className="t2">C</tspan><tspan  y="72" className="t2">A</tspan><tspan  y="72" className="t2">R</tspan><tspan  y="72" className="t2">T</tspan><tspan  y="72" className="t2">E</tspan><tspan  y="72" className="t2">
+                <tspan x="-62.2" y="72"className="t2">P</tspan><tspan  y="72"className="t2">I</tspan><tspan  y="72"className="t2">C</tspan><tspan  y="72"className="t2">A</tspan><tspan  y="72"className="t2">R</tspan><tspan  y="72"className="t2">T</tspan><tspan  y="72"className="t2">E</tspan><tspan  y="72"className="t2">
         </tspan>
             </text>
         </svg>

@@ -1,39 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { svgStyle, shapeBaseStyle, textStyle, handleHover } from "../styles"
 
 const Campus851 = () => {
     const navigate = useNavigate();
     const routeChange = (path: string) => navigate(path);
-
-    const svgStyle = {
-        width: "150%",
-        height: "auto",
-        display: "block",
-    };
-
-    const shapeBaseStyle = {
-        fill: "#AF4C0F",
-        cursor: "pointer",
-        transition: "all 0.25s ease",
-        transformOrigin: "center",
-    };
-
-    const textStyle = {
-        fontSize: 64,
-        fill: "#ffffff",
-        fontFamily: '"DejaVu Sans", sans-serif',
-        fontWeight: 400,
-        userSelect: "none" as const,
-        pointerEvents: "none" as const,
-    };
-
-    const handleHover = (e: React.MouseEvent<SVGPathElement>, isHover: boolean) => {
-        const shape = e.currentTarget;
-        shape.style.fill = isHover ? "#e86718" : "#AF4C0F";
-        shape.style.transform = isHover ? "scale(1.02)" : "scale(1)";
-        shape.style.filter = isHover
-            ? "drop-shadow(0 0 10px #e86718)"
-            : "drop-shadow(0 0 0 transparent)";
-    };
 
     return (
     <div>

@@ -1,4 +1,4 @@
-import layers_icon from "../assets/layers.png";
+import layers_icon from "../../assets/layers.png";
 
 interface LevelsProps {
     layers: number;

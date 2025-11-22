@@ -1,15 +1,17 @@
-import { useState } from "react";
-import Levels from "../levels";
+import { useState, type ReactElement } from "react";
+import Levels from "../Levels";
+import Menos1 from "./menos1"
+import Menos2 from "./menos2"
+import Menos3 from "./menos3"
 
 const Inferiores = () => {
-    const layers: Array<string> = ["851-1", "851-2", "851-3"];
+    const layers: Array<ReactElement> = [<Menos1/>, <Menos2/>, <Menos3/>];
     const [level, setLevel] = useState(0);
 
     return (
         <div>
-            <h1 className="center">851 - Pisos inferiores</h1>
             <div className="mainContainer">
-                <img className="building" src={`/inferiores/${layers[level]}.jpg`} />
+                {layers[level]}
                 <Levels layers={layers.length} level={level} setLevel={setLevel} />
             </div>
         </div>
