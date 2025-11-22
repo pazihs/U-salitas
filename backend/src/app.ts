@@ -7,6 +7,7 @@ import classroomsRouter from "./controllers/classrooms";
 import usersRouter from "./controllers/users";
 import loginRouter from "./controllers/login";
 import reviewRouter from "./controllers/reviews";
+import testingRouter from "./controllers/testing";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { seedClassrooms } from "./utils/initDb";
@@ -41,6 +42,9 @@ app.use("/api/classrooms", classroomsRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/reviews", reviewRouter);
+if (process.env.NODE_ENV === "test") {
+  app.use("/api/testing", testingRouter);
+}
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
