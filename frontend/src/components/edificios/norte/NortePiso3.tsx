@@ -40,10 +40,7 @@ const NortePiso3 = () => {
                 d="m1908.37 145v196.36h-328.66v-196.36z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 43" 
                 fill-rule="evenodd" 
                 className="s0" 
@@ -118,150 +115,105 @@ const NortePiso3 = () => {
                 d="m890.8 364.46v214.21h-164.69v-214.21z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 32" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1782.36 772.92v149.11h-98.7v-149.11z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 31" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1681.56 772.92v149.11h-101.85v-149.11z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 30" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1577.61 772.92v149.11h-100.81v-149.11z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 29" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1474.7 772.92v149.11h-101.85v-149.11z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 28" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1370.75 772.92v149.11h-100.81v-149.11z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 27" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1267.84 771.87v150.16h-100.8v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 26" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1164.94 771.87v150.16h-101.85v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 25" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1060.99 771.87v150.16h-98.71v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 24" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m960.18 771.87v150.16h-102.9v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 23" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m855.18 771.87v150.16h-100.8v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 22" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m752.28 771.87v150.16h-102.91v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 21" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m647.27 771.87v150.16h-99.75v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 20" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m545.42 771.87v150.16h-101.85v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 19" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m441.47 771.87v150.16h-99.76v-150.16z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 18" 
                 fill-rule="evenodd" 
                 className="s0" 
@@ -288,100 +240,70 @@ const NortePiso3 = () => {
                 d="m1908.92 344.51v368.56h-391.72v-368.56z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 12" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1577.61 145v132.3h-135.46v-132.3z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 11" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1440.05 145v132.3h-102.9v-132.3z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 10" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1335.05 145v132.3h-99.76v-132.3z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 9" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1233.19 145v132.3h-126v-132.3z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 8" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m1105.09 145v132.3h-110.26v-132.3z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 7" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m992.73 145v132.3h-135.45v-132.3z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 6" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m855.18 145v145.96h-100.8v-145.96z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 5" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m752.28 145v145.96h-101.86v-145.96z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 4" 
                 fill-rule="evenodd" 
                 className="s0" 
                 d="m648.32 145v145.96h-100.8v-145.96z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
-                onMouseEnter={(e) => handleHover(e, true)} 
-                onMouseLeave={(e) => handleHover(e, false)} 
-                style={shapeBaseStyle}
+                style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 id="Shape 3" 
                 fill-rule="evenodd" 
                 className="s0" 

@@ -43,17 +43,11 @@ const Campus851 = () => {
                 />
                 <path
                     d="m1463.05 0v257.4h-962.05v-257.4z"
-                    style={shapeBaseStyle}
-                    onMouseEnter={(e) => handleHover(e, true)}
-                    onMouseLeave={(e) => handleHover(e, false)}
-                    onClick={() => routeChange("/edificio-oriente")}
+                    style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 />
                 <path
                     d="m1920 339v319h-492.54v-319z"
-                    style={shapeBaseStyle}
-                    onMouseEnter={(e) => handleHover(e, true)}
-                    onMouseLeave={(e) => handleHover(e, false)}
-                    onClick={() => routeChange("/auditorio-detigny")}
+                    style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 />
                 <path
                     d="m1029.09 679c-38.21 0-69.09-31.07-69.09-69.5 0-38.43 30.88-69.5 69.09-69.5 38.2 0 69.09 31.07 69.09 69.5 0 38.43-30.89 69.5-69.09 69.5z"
@@ -63,21 +57,21 @@ const Campus851 = () => {
                     onClick={() => routeChange("/851/pisos-inferiores")}
                 />
 
-                <text style={{ ...textStyle, transform: "matrix(0,-1,1,0,195,737.5)" }}>
+                <text style={{ ...textStyle, fontSize:"50px", transform: "matrix(0,-1,1,0,195,737.5)" }}>
                     <tspan>EDIFICIO NORTE</tspan>
                 </text>
-                <text style={{ ...textStyle, transform: "matrix(1,0,0,1,688,141)" }}>
+                <text style={{ ...textStyle, fontSize:"50px", transform: "matrix(1,0,0,1,688,141)" }}>
                     <tspan>EDIFICIO ORIENTE</tspan>
                 </text>
-                <text style={{ ...textStyle, transform: "matrix(1,0,0,1,863,946)" }}>
+                <text style={{ ...textStyle, fontSize:"50px", transform: "matrix(1,0,0,1,863,946)" }}>
                     <tspan>EDIFICIO PONIENTE</tspan>
                 </text>
-                <text style={{ ...textStyle, transform: "matrix(1,0,0,1,1525,490)" }}>
+                <text style={{ ...textStyle, fontSize:"50px", transform: "matrix(1,0,0,1,1525,490)" }}>
                     <tspan>AUDITORIO</tspan>
                     <tspan x="0" dy="64">D'ENTIGNY</tspan>
                 </text>
-                <text style={{ ...textStyle, transform: "matrix(1,0,0,1,1000,635)" }}>
-                    <tspan>-1</tspan>
+                <text style={{ ...textStyle, fontSize:"50px", transform: "matrix(1,0,0,1,1000,635)" }}>
+                    <tspan x="5" y="-10">-1</tspan>
                 </text>
             </svg>
         </div>

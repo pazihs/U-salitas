@@ -23,6 +23,31 @@ label {
   border-color: rgba(69, 25, 25, 0.87);
 }
 
+.search-input {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  width: 120%;
+  line-height: 1.2;
+  /* margin-top: 0.2rem; */
+  margin-bottom: 0.4rem;
+  background-color: #ffffea;
+  color: black;
+  border-radius: 10px;
+  border-color: rgba(69, 25, 25, 0.87);
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 textarea {
   font-size: 1rem;
   padding: 0.4rem;
