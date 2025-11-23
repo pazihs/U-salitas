@@ -1,12 +1,12 @@
 import { test, expect, request } from "@playwright/test"
-import { initialClassrooms, loginWith } from "./helper";
+import { clickElement, initialClassrooms, loginWith, search } from "./helper";
 
 test.describe("U-salitas app", () => {
     test.beforeEach(async ({ page, request }) => {
 
         const resetResponse = await request.post("/api/testing/reset");
         expect(resetResponse.ok()).toBeTruthy();
-        
+
         const userResponse = await request.post("/api/users", {
             data: {
                 username: "user_test",
@@ -14,14 +14,13 @@ test.describe("U-salitas app", () => {
                 password: "password_test",
             }
         });
-        
+
         if (!userResponse.ok()) {
             const errorBody = await userResponse.text();
             console.error("Failed to create user:", userResponse.status(), errorBody);
         }
         expect(userResponse.ok()).toBeTruthy();
 
-        // Crear salas secuencialmente para evitar race conditions
         for (const classroom of initialClassrooms) {
             const response = await request.post("/api/classrooms", { data: classroom });
             expect(response.ok()).toBeTruthy();
@@ -36,12 +35,8 @@ test.describe("U-salitas app", () => {
 
     test.describe("login flow", () => {
         test("is successful with correct credentials", async ({ page }) => {
-            await page.screenshot({ path: "1.png" });
             await loginWith(page, "user_test", "password_test");
-
-            await page.screenshot({ path: "2.png" });
             await page.waitForURL("/");
-            await page.screenshot({ path: "3.png" });
 
             // Verificar que está logueado
             await expect(page.getByRole("button", { name: "Cerrar sesión" })).toBeVisible();
@@ -93,46 +88,102 @@ test.describe("U-salitas app", () => {
 
     test.describe("searching for a classroom", () => {
         test("by name", async ({ page }) => {
-            const searchInput = page.getByPlaceholder("Busca una sala");
-            await searchInput.waitFor({ state: 'visible' });
-            await searchInput.fill("B01");
+            await search(page, "B01");
             await expect(page.locator('.card-grid')).toBeVisible();
             await expect(page.locator('.card-grid')).toContainText('B01');
         });
 
         test("by name substring", async ({ page }) => {
-            const searchInput = page.getByPlaceholder("Busca una sala");
-            await searchInput.waitFor({ state: 'visible' });
-            await searchInput.fill("B0");
+            await search(page, "B0");
             await expect(page.locator('.preview-classroom')).toHaveCount(3);
         });
 
         test("by non-existing name", async ({ page }) => {
-            const searchInput = page.getByPlaceholder("Busca una sala");
-            await searchInput.waitFor({ state: 'visible' });
-            await searchInput.fill("QO");
+            await search(page, "QO");
             await expect(page.getByText("No se encontraron resultados")).toBeVisible();
         });
 
         test("by zone", async ({ page }) => {
-            const searchInput = page.getByPlaceholder("Busca una sala");
-            await searchInput.waitFor({ state: 'visible' });
-            await searchInput.fill("oriente");
+            await search(page, "oriente");
             await expect(page.locator('.preview-classroom')).toHaveCount(3);
         });
 
         test("by non-existing zone", async ({ page }) => {
-            const searchInput = page.getByPlaceholder("Busca una sala");
-            await searchInput.fill("norte");
+            await search(page, "norte");
             await expect(page.getByText("No se encontraron resultados")).toBeVisible();
         });
 
+
+        test("has a link that leads to classroom page", async ({ page }) => {
+            await search(page, "B01");
+            await expect(page.locator('.card-grid')).toBeVisible();
+            await expect(page.locator('.card-grid')).toContainText('Más información');
+            await expect(page.locator('.card-grid')).toContainText('B01');
+
+            const link = page.getByRole("link", { name: "Más información" });
+            await link.click();
+            await expect(page.getByText("Sala B01")).toBeVisible();
+            await expect(page.getByText("Vista interior")).toBeVisible();
+            await expect(page.getByText("Vista exterior")).toBeVisible();
+        });
     });
 
+    test.describe("inside a classroom page", () => {
+        test("liking can be done with session started and can't dislike when liked", async ({ page }) => {
+            await loginWith(page, "user_test", "password_test");
+            await page.waitForURL("/");
 
-    // se pueden buscar salas
-    // con éxito
-    // búsqueda vacía
-    // ver info de la sala -> más información
-    // se puede dar like/no dar cuando no está la sesión iniciada
-})
+            await search(page, "B01");
+
+            const link = page.getByRole("link", { name: "Más información" });
+            await link.click();
+
+            const likesText = await page.getByTestId("likes-count").textContent();
+            const likesCount = parseInt(likesText || "0");
+
+            await clickElement(page, "like-button");
+
+            await expect(page.getByTestId("likes-count")).toHaveText((likesCount + 1).toString());
+
+            await clickElement(page, "dislike-button");
+            await expect(page.getByRole("alert")).toContainText("Ya diste like");
+
+        });
+
+        test("disliking can be done with session started and can't like when disliked", async ({ page }) => {
+            await loginWith(page, "user_test", "password_test");
+            await page.waitForURL("/");
+
+            await search(page, "B01");
+
+            const link = page.getByRole("link", { name: "Más información" });
+            await link.click();
+
+            const dislikesText = await page.getByTestId("dislikes-count").textContent();
+            const dislikesCount = parseInt(dislikesText || "0");
+
+            await clickElement(page, "dislike-button");
+
+            await expect(page.getByTestId("dislikes-count")).toHaveText((dislikesCount + 1).toString());
+
+            await clickElement(page, "like-button");
+            await expect(page.getByRole("alert")).toContainText("Ya diste dislike");
+
+        });
+
+        test("liking and disliking can't be done without signing in", async ({ page }) => {
+            await search(page, "B01");
+            const link = page.getByRole("link", { name: "Más información" });
+            await link.click();
+
+            await clickElement(page, "like-button");
+            await expect(page.getByRole("alert")).toContainText("Inicia sesión para dar like");
+
+            // Esperar que desaparezca la alerta
+            await expect(page.getByRole("alert")).not.toBeVisible({ timeout: 6000 });
+
+            await clickElement(page, "dislike-button");
+            await expect(page.getByRole("alert")).toContainText("Inicia sesión para dar dislike");
+        });
+    });
+});

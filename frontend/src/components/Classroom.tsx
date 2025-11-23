@@ -109,10 +109,10 @@ const Classroom = () => {
                 <div className="review">
                     <h3>Reseñas</h3>
                     <p>
-                        {classroom.likes.length}
-                        <Button onClick={handleLike}>{liked ? <ThumbUp sx={{color: "#af4c0f"}}/> : <ThumbUpOffAlt sx={{color: "#5d3735"}}/>}</Button>
-                        <Button onClick={handleDislike}>{disliked ? <ThumbDown sx={{color: "#af4c0f"}}/> : <ThumbDownOffAlt sx={{color: "#5d3735"}}/>}</Button>
-                        {classroom.dislikes.length}
+                        <span data-testid="likes-count">{classroom.likes.length}</span>
+                        <Button data-testid="like-button" onClick={handleLike}>{liked ? <ThumbUp sx={{color: "#af4c0f"}}/> : <ThumbUpOffAlt sx={{color: "#5d3735"}}/>}</Button>
+                        <Button data-testid="dislike-button" onClick={handleDislike}>{disliked ? <ThumbDown sx={{color: "#af4c0f"}}/> : <ThumbDownOffAlt sx={{color: "#5d3735"}}/>}</Button>
+                        <span data-testid="dislikes-count">{classroom.dislikes.length}</span>
                     </p>
                 </div>
             </div>

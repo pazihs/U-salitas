@@ -31,24 +31,17 @@ const loginWith = async (page: Page, username: string, password: string) => {
     await page.getByLabel("Contraseña").fill(password);
     await page.getByRole("button", { name: "Iniciar Sesión" }).click();
 };
+const search = async (page: Page, query: string) => {
+    const searchInput = page.getByPlaceholder("Busca una sala");
+    await searchInput.waitFor({ state: 'visible' });
+    await searchInput.fill(query);
+};
 
 const clickElement = async (page: Page, destination: string) => {
     const button = await page.getByTestId(destination);
     await button.click();
 };
 
-// const createSearch = async (page: Page, content: string) => {
-//     const commentField = page.getByRole("textbox", { name: /Comment/i }).first();
-//     await commentField.waitFor({ state: "visible" });
-//     await commentField.fill(content);
-
-//         const nameField = page.getByLabel("Name (Optional)");
-//         await nameField.waitFor({ state: "visible" });
-//         await nameField.fill(author);
-
-
-//     await page.getByRole("button", { name: "Post" }).first().click();
-// };
 
 // const createReply = async (page: Page, content: string, author?: string) => {
 //     await page.getByRole("textbox", { name: /Comment/i }).nth(1).fill(content);
@@ -58,4 +51,4 @@ const clickElement = async (page: Page, destination: string) => {
 //     await page.locator("form").nth(1).getByRole("button", { name: "Post" }).click();
 // };
 
-export { initialClassrooms, loginWith, clickElement };
+export { initialClassrooms, loginWith, clickElement, search };
