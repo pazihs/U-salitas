@@ -38,7 +38,7 @@ const PonientePiso2 = () => {
                 d="m1890.86 507.56v321.44h-56.13v-321.44z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -146,7 +146,7 @@ const PonientePiso2 = () => {
                 d="m147.17 595.57v233.43h-112.24v-233.43z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -156,7 +156,7 @@ const PonientePiso2 = () => {
                 d="m474.99 255v183.68h-440.06v-183.68z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -166,7 +166,7 @@ const PonientePiso2 = () => {
                 d="m981.46 255v247.46h-503.99v-247.46z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -176,7 +176,7 @@ const PonientePiso2 = () => {
                 d="m1890.86 255v158.17h-230.88v-158.17z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}

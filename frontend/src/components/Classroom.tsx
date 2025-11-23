@@ -6,6 +6,7 @@ import login from "../services/login";
 import { Button } from "@mui/material";
 import { ThumbDown, ThumbDownOffAlt, ThumbUp, ThumbUpOffAlt } from "@mui/icons-material";
 import { useClassroomStore } from "../classroomStore";
+import uhardcito from "../assets/uhardcito.png";
 
 
 const Classroom = () => {
@@ -72,7 +73,14 @@ const Classroom = () => {
         }
     };
 
-    if (!id || !classroom) return null;
+    if (!id || !classroom) {
+        return (
+            <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "30px"}}>
+                <h1 style={{alignSelf: "flex-end"}}>¡Ups! Esta página aún no está terminada</h1>
+                <img src={uhardcito} style={{ width: "300px", height: "auto", alignSelf: "flex-start"}}/>
+            </div>
+        );
+    };
 
     return (
         <div style={{ marginTop: "30px", padding: "20px" }}>

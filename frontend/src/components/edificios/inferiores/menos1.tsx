@@ -34,7 +34,7 @@ const Menos1 = () => {
                 </defs>
             <use id="Background" href="#img1" x="0" y="0"/>
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -44,7 +44,7 @@ const Menos1 = () => {
             d="m1901.91 161.8v264.03h-108.79v-264.03z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -54,7 +54,7 @@ const Menos1 = () => {
             d="m1901.91 742.43v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -64,7 +64,7 @@ const Menos1 = () => {
             d="m1790.68 309.7v116.13h-145.47v-116.13z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -74,7 +74,7 @@ const Menos1 = () => {
             d="m1901.91 706.98v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -84,7 +84,7 @@ const Menos1 = () => {
             d="m1901.91 671.53v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -94,7 +94,7 @@ const Menos1 = () => {
             d="m1901.91 625.08v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -104,7 +104,7 @@ const Menos1 = () => {
             d="m1901.91 589.63v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -114,7 +114,7 @@ const Menos1 = () => {
             d="m1901.91 554.18v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -124,7 +124,7 @@ const Menos1 = () => {
             d="m1901.91 506.51v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -134,7 +134,7 @@ const Menos1 = () => {
             d="m1901.91 471.06v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -193,7 +193,7 @@ const Menos1 = () => {
             d="m455.95 882.34v99.07h-83.83v-99.07z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -238,7 +238,7 @@ const Menos1 = () => {
             d="m824.38 486.95c-33.46 0-60.5-26.77-60.5-59.9 0-33.12 27.04-59.89 60.5-59.89 33.47 0 60.51 26.77 60.51 59.89 0 33.13-27.04 59.9-60.51 59.9z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -248,7 +248,7 @@ const Menos1 = () => {
             d="m734.54 776.66v183.35h-165.02v-183.35z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -258,7 +258,7 @@ const Menos1 = () => {
             d="m909.34 776.66v183.35h-165.02v-183.35z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -268,7 +268,7 @@ const Menos1 = () => {
             d="m1084.14 776.66v183.35h-165.02v-183.35z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -285,7 +285,7 @@ const Menos1 = () => {
             d="m899.56 335.37v365.5h-325.15v-365.5z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -295,7 +295,7 @@ const Menos1 = () => {
             d="m740.65 20v257.92h-184.58v-257.92z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -305,7 +305,7 @@ const Menos1 = () => {
             d="m1263.83 20v257.92h-184.58v-257.92z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -315,7 +315,7 @@ const Menos1 = () => {
             d="m911.78 86.01v189.47h-125.9v-189.47z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -325,7 +325,7 @@ const Menos1 = () => {
             d="m1041.36 86.01v189.47h-125.91v-189.47z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
@@ -335,7 +335,7 @@ const Menos1 = () => {
             d="m455.84 376.94v281.14h-438.84v-281.14z"
         />
             <path 
-            onClick={() => routeChange("/auditorio-detigny")}
+            onClick={() => routeChange("/classrooms/soon")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}

@@ -38,7 +38,7 @@ const PonientePiso3 = () => {
                 d="m1879.39 597.18v301.67h-52.13v-301.67z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -139,7 +139,7 @@ const PonientePiso3 = () => {
                 d="m263.46 661.53v236.94h-111.36v-236.94z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -156,7 +156,7 @@ const PonientePiso3 = () => {
                 d="m149.73 661.53v236.94h-113.73v-236.94z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -166,7 +166,7 @@ const PonientePiso3 = () => {
                 d="m496.85 145v335.27h-229.83v-335.27z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -183,7 +183,7 @@ const PonientePiso3 = () => {
                 d="m1421.12 236.22v246.42h-88.09v-246.42z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -200,7 +200,7 @@ const PonientePiso3 = () => {
                 d="m1083.83 553.8c-44.2 0-79.93-36.03-79.93-80.6 0-44.57 35.73-80.6 79.93-80.6 44.2 0 79.93 36.03 79.93 80.6 0 44.57-35.73 80.6-79.93 80.6z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
@@ -210,7 +210,7 @@ const PonientePiso3 = () => {
                 d="m1879.84 184.09v298.55h-225.99v-298.55z"
             />
             <path
-                onClick={() => routeChange("/auditorio-detigny")}
+                onClick={() => routeChange("/classrooms/soon")}
                 onMouseEnter={(e) => handleHover(e, true)} 
                 onMouseLeave={(e) => handleHover(e, false)} 
                 style={shapeBaseStyle}
