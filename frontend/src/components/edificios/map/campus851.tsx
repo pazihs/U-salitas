@@ -37,6 +37,7 @@ const Campus851 = () => {
                 <path
                     d="m1920 759.81v304.19h-1521v-304.19z"
                     style={shapeBaseStyle}
+                    data-testid="poniente"
                     onMouseEnter={(e) => handleHover(e, true)}
                     onMouseLeave={(e) => handleHover(e, false)}
                     onClick={() => routeChange("/851/poniente")}
@@ -50,6 +51,7 @@ const Campus851 = () => {
                     style={{...shapeBaseStyle, fill: "#6f6867", cursor: "default"}}
                 />
                 <path
+                    data-testid="-1"
                     d="m1029.09 679c-38.21 0-69.09-31.07-69.09-69.5 0-38.43 30.88-69.5 69.09-69.5 38.2 0 69.09 31.07 69.09 69.5 0 38.43-30.89 69.5-69.09 69.5z"
                     style={shapeBaseStyle}
                     onMouseEnter={(e) => handleHover(e, true)}

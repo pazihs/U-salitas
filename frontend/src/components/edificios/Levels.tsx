@@ -17,12 +17,12 @@ const Levels = ({ layers, level, setLevel }: LevelsProps) => {
     return (
         <div className="layerContainer">
             {level > 0 ? (
-                <button className="up" onClick={() => changeLevel(-1)}></button>) :
-                (<button className="up" disabled={true}></button>)}
+                <button data-testid="up" className="up" onClick={() => changeLevel(-1)}></button>) :
+                (<button data-testid="up" className="up" disabled={true}></button>)}
             <img src={layers_icon} />
             {level < layers - 1 ? (
-                <button className="down" onClick={() => changeLevel(+1)}></button>) :
-                (<button className="down" disabled={true}></button>)}
+                <button data-testid="down" className="down" onClick={() => changeLevel(+1)}></button>) :
+                (<button data-testid="down" className="down" disabled={true}></button>)}
         </div>
     );
 };

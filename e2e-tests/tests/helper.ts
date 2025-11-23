@@ -32,6 +32,11 @@ const loginWith = async (page: Page, username: string, password: string) => {
     await page.getByRole("button", { name: "Iniciar Sesión" }).click();
 };
 
+const clickElement = async (page: Page, destination: string) => {
+    const button = await page.getByTestId(destination);
+    await button.click();
+};
+
 // const createSearch = async (page: Page, content: string) => {
 //     const commentField = page.getByRole("textbox", { name: /Comment/i }).first();
 //     await commentField.waitFor({ state: "visible" });
@@ -53,4 +58,4 @@ const loginWith = async (page: Page, username: string, password: string) => {
 //     await page.locator("form").nth(1).getByRole("button", { name: "Post" }).click();
 // };
 
-export { initialClassrooms, loginWith };
+export { initialClassrooms, loginWith, clickElement };

@@ -24,7 +24,7 @@ const Home = () => {
             <div className='mainContainer'>
                 <button className='campusButton' onClick={() => routeChange("/850")}>850</button>
                 <img src={fcfm} className='fcfm'></img>
-                <button className='campusButton' onClick={() => routeChange("/851")}>851</button>
+                <button data-testid="851" className='campusButton' onClick={() => routeChange("/851")}>851</button>
             </div>
         </div>
     );

@@ -273,6 +273,7 @@ const Menos1 = () => {
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
             id="b01" 
+            data-testid="B01"
             fill-rule="evenodd" 
             className="s0" 
             d="m1258.94 776.66v183.35h-165.02v-183.35z"
@@ -329,6 +330,7 @@ const Menos1 = () => {
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
+            data-testid="piscina"
             id="Forma 2" 
             fill-rule="evenodd" 
             className="s0" 
