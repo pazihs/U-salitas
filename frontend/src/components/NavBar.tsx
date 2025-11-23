@@ -33,9 +33,10 @@ const NavBar = () => {
             <button className="usalitas-button" onClick={() => navigate("/")}/>
             <Search />
             {isLoggedIn ? (
-                <button style={{ marginRight: "15px" }} onClick={() => {
-                    loginService.logout();
+                <button style={{ marginRight: "30px" }} onClick={async () => {
+                    await loginService.logout();
                     setUser(null);
+                    window.dispatchEvent(new Event('userChanged'));
                     navigate("/", { replace: true });
                 }}>
                     Cerrar sesión
