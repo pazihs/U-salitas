@@ -5,7 +5,7 @@ import { search } from "../services/search";
 import classrooms from "../services/classrooms";
 import { useClassroomStore } from "../classroomStore";
 import { useLocation } from "react-router-dom";
-
+import SearchIcon from '@mui/icons-material/Search';
 
 function Search() {
     const [error, setError] = useState<Error | null>(null);
@@ -43,15 +43,15 @@ function Search() {
     } else {
         return (
             <div className="wrapper" style={{ marginLeft: "auto", marginRight: "30px" }}>
-                <div className="search-wrapper">
-                    <label htmlFor="search-form">
-                        <span className="sr-only">Busca tu sala aquí </span>
+                <div className="search-wrapper" >
+                    <div className="search-row">
+                        <SearchIcon sx={{ fontSize: 30}}/>
                         <input
                             type="search"
                             name="search-form"
                             id="search-form"
                             className="search-input"
-                            placeholder="Sala, edificio, zona..."
+                            placeholder="Busca una sala, edificio, zona..."
                             value={q}
                             onChange={(e) => {
                                 setQ(e.target.value);
@@ -59,7 +59,7 @@ function Search() {
                                 setClassrooms(search(items, e.target.value, searchParam));
                             }}
                         />
-                    </label>
+                    </div>
                 </div>
             </div>
         );

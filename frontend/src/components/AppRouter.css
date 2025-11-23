@@ -58,7 +58,11 @@
   filter: brightness(150%);
 }
 
-.layerContainer button:active {
+.layerContainer .up:active {
+  transform: translateY(-4px);
+}
+
+.layerContainer .down:active {
   transform: translateY(4px);
 }
 
