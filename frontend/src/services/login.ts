@@ -1,9 +1,7 @@
 import axios from "axios";
 import axiosSecure from "../utils/axiosSecure";
 
-const baseUrl = process.env.NODE_ENV === "development"
-    ? "/api/login"
-    : "http://localhost:3001/api/login";
+const baseUrl = "/api/login";
 
 type Credentials = {
     username: string;

@@ -2,9 +2,7 @@ import axios from "axios";
 import type { ReviewData } from "../types/reviews";
 import axiosSecure from "../utils/axiosSecure";
 
-const baseUrl = process.env.NODE_ENV === "development"
-    ? "/api/reviews"
-    : "http://localhost:3001/api/reviews";
+const baseUrl = "/api/reviews";
 
 const getAll = () => {
     //   const request = axios.get(baseUrl);
