@@ -1,5 +1,5 @@
 export type ClassroomData = {
-    _id: string;
+    id: string;
     name: string;
     floor: number;
     building: '850' | '851'; // 850, 851

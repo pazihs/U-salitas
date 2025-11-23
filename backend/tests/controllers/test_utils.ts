@@ -31,7 +31,7 @@ const nonExistingId = async () => {
   await classroom.save();
   await classroom.deleteOne();
 
-  return classroom._id.toString();
+  return classroom.id;
 };
 
 const classroomsInDb = async (): Promise<ClassroomData[]> => {

@@ -80,7 +80,7 @@ describe("when there is initially some classrooms saved", () => {
       const classroomToView = classroomsAtStart[0];
 
       const resultClassroom = await api
-        .get(`/api/classrooms/${classroomToView._id}`)
+        .get(`/api/classrooms/${classroomToView.id}`)
         .expect(200)
         .expect("Content-Type", /application\/json/);
 
@@ -91,7 +91,7 @@ describe("when there is initially some classrooms saved", () => {
       const classroomsAtStart = await helper.classroomsInDb();
       const classroomToDelete = classroomsAtStart[0];
 
-      await api.delete(`/api/classrooms/${classroomToDelete._id}`).expect(204);
+      await api.delete(`/api/classrooms/${classroomToDelete.id}`).expect(204);
 
       const classroomsAtEnd = await helper.classroomsInDb();
 

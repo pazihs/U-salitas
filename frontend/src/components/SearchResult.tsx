@@ -12,7 +12,7 @@ const SearchResult = () => {
             <div className="classrooms-list">
                 <div className="card-grid">
                     {classrooms.length > 0 ? classrooms.map((item) => (
-                        <div key={item._id}>
+                        <div key={item.id}>
                             <PreviewClassroom classroom={item} />
                         </div>
                     )) : (

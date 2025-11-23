@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export interface ClassroomData {
-  _id: string;
+  id: string;
   name: string;
   floor: number;
   building: "850" | "851";
@@ -16,9 +16,7 @@ export interface ClassroomData {
 
 const classroomSchema = new mongoose.Schema({
   _id: {
-    type: String,
-    minLength: 2,
-    required: true
+    type: String
   },
   name: {
     type: String,
@@ -45,11 +43,18 @@ const classroomSchema = new mongoose.Schema({
   ],
 });
 
+// Middleware para generar _id automáticamente antes de guardar
+classroomSchema.pre('save', function(next) {
+  if (!this._id) {
+    this._id = this.name.toString().toLowerCase().replace(/\s+/g, "");
+  }
+  next();
+});
+
 classroomSchema.set("toJSON", {
   transform: (document, returnedObject: any) => {
-    if (!returnedObject.id) {
-      returnedObject._id = returnedObject._id?.toString();
-    }
+    returnedObject.id = returnedObject._id;
+    delete returnedObject._id;
     delete returnedObject.__v;
   },
 });

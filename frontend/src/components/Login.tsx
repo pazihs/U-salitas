@@ -9,7 +9,7 @@ const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const { user, setUser, setToast } = useClassroomStore();
+    const { user, setUser, setToast, setQuery } = useClassroomStore();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -30,6 +30,7 @@ const Login = () => {
             setUser(user);
             setUsername("");
             setPassword("");
+            setQuery(""); // Limpiar búsqueda al hacer login
             console.log("Logged in user:", user);
             navigate("/", { replace: true });
         } catch (exception) {

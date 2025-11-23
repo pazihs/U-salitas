@@ -23,7 +23,7 @@ const PreviewClassroom = ({ classroom }: ClassroomProps) => {
         <p>Piso: {classroom.floor}</p>
         <p>Capacidad: {classroom.capacity}</p>
         <div style={{ textAlign: "right", marginLeft: '60px', display: "flex", gap: "20px"  }}>
-          <Link to={`/classrooms/${classroom._id}`} onClick={() => setQuery("")}>Más información</Link>
+          <Link to={`/classrooms/${classroom.id}`} onClick={() => setQuery("")}>Más información</Link>
           <a href="">Ver en el mapa</a>
         </div>
       </div>

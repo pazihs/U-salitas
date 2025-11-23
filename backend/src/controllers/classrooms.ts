@@ -33,7 +33,6 @@ router.post("/", async (request, response, next) => {
     });
   } else {
     const classroom = {
-      id: (body.name as string).toLowerCase().replace(" ", ""),
       name: body.name,
       floor: body.floor,
       building: body.building,
