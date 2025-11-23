@@ -79,7 +79,7 @@ const Login = () => {
                     >
                         Iniciar Sesión
                     </button>
-                    <button className="to-login-button" onClick={() => navigate("/register")}>Crear cuenta</button>
+                    <button className="to-login-button" type="button" onClick={() => navigate("/register")}>Crear cuenta</button>
                 </form>) :
                 (<p>{user.username} logged-in <button className="register-button" onClick={handleLogout}>logout</button>
                 </p>)}

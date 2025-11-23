@@ -38,17 +38,8 @@ const search = async (page: Page, query: string) => {
 };
 
 const clickElement = async (page: Page, destination: string) => {
-    const button = await page.getByTestId(destination);
+    const button = page.getByTestId(destination);
     await button.click();
 };
-
-
-// const createReply = async (page: Page, content: string, author?: string) => {
-//     await page.getByRole("textbox", { name: /Comment/i }).nth(1).fill(content);
-//     if (author) {
-//         await page.getByRole("textbox", { name: /Name (Optional)/i }).nth(1).fill(author);
-//     }
-//     await page.locator("form").nth(1).getByRole("button", { name: "Post" }).click();
-// };
 
 export { initialClassrooms, loginWith, clickElement, search };

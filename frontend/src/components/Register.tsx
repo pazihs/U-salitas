@@ -2,6 +2,7 @@ import { useState } from "react";
 import usersService from "../services/users";
 import './form.css';
 import { useNavigate } from "react-router-dom";
+import { useUtilsStore } from "../utilsStore";
 
 const Register = () => {
     const [username, setUsername] = useState("");
@@ -10,6 +11,7 @@ const Register = () => {
 
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
     const navigate = useNavigate();
+    const { setToast } = useUtilsStore();
 
     const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -19,9 +21,11 @@ const Register = () => {
                 email,
                 password,
             });
+            setToast({ message: "Usuario creado correctamente", severity: "success" })
             setUsername("");
             setPassword("");
             setEmail("");
+            navigate("/login");
         } catch (exception) {
             setErrorMessage("Falta rellenar algún campo o el usuario ya existe");
             setTimeout(() => {
@@ -36,7 +40,7 @@ const Register = () => {
             <p style={{ color: "red" }}>{errorMessage}</p>
             <form style={{ display: "flex", flexDirection: "column", alignItems: "center", maxWidth: 600 }} onSubmit={handleRegister}>
                 <div>
-                    <label htmlFor="username" style={{textAlign: "center"}}>Nombre de usuario</label>
+                    <label htmlFor="username" style={{ textAlign: "center" }}>Nombre de usuario</label>
                     <input
                         className="form-input"
                         type="text"
@@ -47,7 +51,7 @@ const Register = () => {
                         onChange={({ target }) => setUsername(target.value)}>
                     </input>
 
-                    <label htmlFor="email" style={{textAlign: "center"}}>Correo electrónico</label>
+                    <label htmlFor="email" style={{ textAlign: "center" }}>Correo electrónico</label>
                     <input
                         className="form-input"
                         type="text"
@@ -57,11 +61,11 @@ const Register = () => {
                         value={email} onChange={({ target }) => setEmail(target.value)}>
                     </input>
 
-                    <label htmlFor="password" style={{textAlign: "center"}}>Contraseña</label>
+                    <label htmlFor="password" style={{ textAlign: "center" }}>Contraseña</label>
                     <input
                         className="form-input"
                         type="password"
-                        style={{ borderRadius: 10,  borderColor: "rgba(69, 25, 25, 0.87)"}}
+                        style={{ borderRadius: 10, borderColor: "rgba(69, 25, 25, 0.87)" }}
                         id="password"
                         name="password"
                         placeholder="Tu contraseña"
@@ -69,8 +73,8 @@ const Register = () => {
                     </input>
                 </div>
 
-                <button className="register-button" name="register-button" type="submit">Registrar</button>
-                <button className="to-login-button"  onClick={() => navigate("/login")}>Ya tengo cuenta</button>
+                <button data-testid="register" className="register-button" name="register-button" type="submit">Registrar</button>
+                <button className="to-login-button" type="button" onClick={() => navigate("/login")}>Ya tengo cuenta</button>
             </form>
         </div>
     );

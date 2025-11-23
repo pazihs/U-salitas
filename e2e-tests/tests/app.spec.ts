@@ -33,6 +33,24 @@ test.describe("U-salitas app", () => {
         await expect(page.getByText("Mapa Beauchef")).toBeVisible();
     });
 
+    test("create an account", async ({ page }) => {
+        await page.getByRole("button", { name: "Entrar" }).click();
+        await page.getByRole("button", { name: "Crear cuenta" }).click();
+
+        await page.waitForURL("/register");
+        await page.waitForTimeout(1000);
+
+        // Usar un username único para evitar conflictos
+        const uniqueUsername = `new_user_${Date.now()}`;
+        await page.getByLabel("Nombre de usuario").fill(uniqueUsername);
+        await page.getByLabel("Correo electrónico").fill(`${uniqueUsername}@uchile.cl`);
+        await page.getByLabel("Contraseña").fill("newpassword");
+
+        await clickElement(page, "register");
+
+        await expect(page.getByRole("alert")).toContainText("Usuario creado correctamente");
+    });
+
     test.describe("login flow", () => {
         test("is successful with correct credentials", async ({ page }) => {
             await loginWith(page, "user_test", "password_test");
