@@ -43,9 +43,7 @@ app.use("/api/classrooms", classroomsRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/reviews", reviewRouter);
-// app.get(/^(?!\/api).*/, (req, res) => {
-//   res.sendFile(path.resolve("dist/index.html"));
-// });
+
 if (process.env.NODE_ENV === "test") {
   app.use("/api/testing", testingRouter);
 }

@@ -31,7 +31,6 @@ const Login = () => {
             setUsername("");
             setPassword("");
             console.log("Logged in user:", user);
-            window.dispatchEvent(new Event('userChanged'));
             navigate("/", { replace: true });
         } catch (exception) {
             setToast({ message: 'Error al iniciar sesión: credenciales inválidas', severity: 'error' })
@@ -49,7 +48,7 @@ const Login = () => {
             {!user ?
                 (<form style={{ display: "flex", flexDirection: "column", alignItems: "center", maxWidth: 600 }} onSubmit={handleLogin}>
                     <div>
-                        <label style={{textAlign: "center"}}>Nombre de usuario</label>
+                        <label htmlFor="username" style={{textAlign: "center"}}>Nombre de usuario</label>
                         <input
                             className="form-input"
                             type="text"
@@ -60,7 +59,7 @@ const Login = () => {
                             onChange={({ target }) => setUsername(target.value)}>
                         </input>
 
-                        <label style={{textAlign: "center"}}>Contraseña</label>
+                        <label htmlFor="password" style={{textAlign: "center"}}>Contraseña</label>
                         <input
                             className="form-input"
                             type="password"
@@ -72,6 +71,7 @@ const Login = () => {
                     </div>
                     <button
                         className="register-button"
+                        name="login-button"
                         type="submit"
                     >
                         Iniciar Sesión

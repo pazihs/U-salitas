@@ -36,7 +36,7 @@ const Register = () => {
             <p style={{ color: "red" }}>{errorMessage}</p>
             <form style={{ display: "flex", flexDirection: "column", alignItems: "center", maxWidth: 600 }} onSubmit={handleRegister}>
                 <div>
-                    <label style={{textAlign: "center"}}>Nombre de usuario</label>
+                    <label htmlFor="username" style={{textAlign: "center"}}>Nombre de usuario</label>
                     <input
                         className="form-input"
                         type="text"
@@ -47,7 +47,7 @@ const Register = () => {
                         onChange={({ target }) => setUsername(target.value)}>
                     </input>
 
-                    <label style={{textAlign: "center"}}>Correo electrónico</label>
+                    <label htmlFor="email" style={{textAlign: "center"}}>Correo electrónico</label>
                     <input
                         className="form-input"
                         type="text"
@@ -57,7 +57,7 @@ const Register = () => {
                         value={email} onChange={({ target }) => setEmail(target.value)}>
                     </input>
 
-                    <label style={{textAlign: "center"}}>Contraseña</label>
+                    <label htmlFor="password" style={{textAlign: "center"}}>Contraseña</label>
                     <input
                         className="form-input"
                         type="password"
@@ -69,8 +69,8 @@ const Register = () => {
                     </input>
                 </div>
 
-                <button className="register-button" type="submit">Registrar</button>
-                <button className="to-login-button" onClick={() => navigate("/login")}>Ya tengo cuenta</button>
+                <button className="register-button" name="register-button" type="submit">Registrar</button>
+                <button className="to-login-button"  onClick={() => navigate("/login")}>Ya tengo cuenta</button>
             </form>
         </div>
     );
