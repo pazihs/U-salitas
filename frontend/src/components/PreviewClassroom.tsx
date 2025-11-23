@@ -8,8 +8,8 @@ interface ClassroomProps {
 
 const PreviewClassroom = ({ classroom }: ClassroomProps) => {
   const { setQuery } = useClassroomStore();
-  
-  return(
+
+  return (
     <div className="preview-classroom">
       <div style={{
         marginRight: '10px',
@@ -22,9 +22,8 @@ const PreviewClassroom = ({ classroom }: ClassroomProps) => {
         <p>Edificio: {classroom.building}, Zona: {classroom.zone}</p>
         <p>Piso: {classroom.floor}</p>
         <p>Capacidad: {classroom.capacity}</p>
-        <div style={{ textAlign: "right", marginLeft: '60px', display: "flex", gap: "20px"  }}>
+        <div style={{ textAlign: "right", marginLeft: '60px', display: "flex", gap: "20px" }}>
           <Link to={`/classrooms/${classroom.id}`} onClick={() => setQuery("")}>Más información</Link>
-          <a href="">Ver en el mapa</a>
         </div>
       </div>
     </div>

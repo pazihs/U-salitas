@@ -5,8 +5,8 @@ import classrooms from "../services/classrooms";
 import login from "../services/login";
 import { Button } from "@mui/material";
 import { ThumbDown, ThumbDownOffAlt, ThumbUp, ThumbUpOffAlt } from "@mui/icons-material";
-import { useClassroomStore } from "../classroomStore";
 import uhardcito from "../assets/uhardcito.png";
+import { useUtilsStore } from "../utilsStore";
 
 
 const Classroom = () => {
@@ -14,7 +14,7 @@ const Classroom = () => {
     const [liked, setLiked] = useState<boolean>(false);
     const [disliked, setDisliked] = useState<boolean>(false);
     const [classroom, setClassroom] = useState<ClassroomData | null>(null);
-    const { user, setUser, setToast } = useClassroomStore();
+    const { user, setUser, setToast } = useUtilsStore();
 
     useEffect(() => {
         const init = async () => {

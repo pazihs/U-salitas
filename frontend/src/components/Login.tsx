@@ -3,13 +3,15 @@ import loginService from "../services/login";
 import './form.css';
 import { useNavigate } from "react-router-dom";
 import { useClassroomStore } from "../classroomStore";
+import { useUtilsStore } from "../utilsStore";
 
 
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const { user, setUser, setToast, setQuery } = useClassroomStore();
+    const { user, setUser, setToast } = useUtilsStore();
+    const { setQuery } = useClassroomStore();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -49,7 +51,7 @@ const Login = () => {
             {!user ?
                 (<form style={{ display: "flex", flexDirection: "column", alignItems: "center", maxWidth: 600 }} onSubmit={handleLogin}>
                     <div>
-                        <label htmlFor="username" style={{textAlign: "center"}}>Nombre de usuario</label>
+                        <label htmlFor="username" style={{ textAlign: "center" }}>Nombre de usuario</label>
                         <input
                             className="form-input"
                             type="text"
@@ -60,7 +62,7 @@ const Login = () => {
                             onChange={({ target }) => setUsername(target.value)}>
                         </input>
 
-                        <label htmlFor="password" style={{textAlign: "center"}}>Contraseña</label>
+                        <label htmlFor="password" style={{ textAlign: "center" }}>Contraseña</label>
                         <input
                             className="form-input"
                             type="password"

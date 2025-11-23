@@ -3,12 +3,14 @@ import Search from "./Search";
 import { useEffect } from "react";
 import loginService from "../services/login";
 import { useClassroomStore } from "../classroomStore";
+import { useUtilsStore } from "../utilsStore";
 
 
 const NavBar = () => {
     const navigate = useNavigate();
 
-    const { user, setUser, setQuery } = useClassroomStore();
+    const { setQuery } = useClassroomStore();
+    const { user, setUser } = useUtilsStore();
 
     useEffect(() => {
         const init = async () => {

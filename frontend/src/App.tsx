@@ -4,10 +4,12 @@ import AppRouter from './components/AppRouter';
 import { Alert, Snackbar } from '@mui/material';
 import { useClassroomStore } from './classroomStore';
 import SearchResult from './components/SearchResult';
+import { useUtilsStore } from './utilsStore';
 
 const App = () => {
-  const { query, toast, setToast } = useClassroomStore();
-  
+  const { query } = useClassroomStore();
+  const { toast, setToast } = useUtilsStore();
+
   const handleClose = () => {
     setToast(null);
   };
