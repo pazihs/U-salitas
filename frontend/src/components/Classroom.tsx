@@ -110,8 +110,8 @@ const Classroom = () => {
                     <h3>Reseñas</h3>
                     <p>
                         {classroom.likes.length}
-                        <Button onClick={handleLike}>{liked ? <ThumbUp /> : <ThumbUpOffAlt />}</Button>
-                        <Button onClick={handleDislike}>{disliked ? <ThumbDown /> : <ThumbDownOffAlt />}</Button>
+                        <Button onClick={handleLike}>{liked ? <ThumbUp sx={{color: "#af4c0f"}}/> : <ThumbUpOffAlt sx={{color: "#5d3735"}}/>}</Button>
+                        <Button onClick={handleDislike}>{disliked ? <ThumbDown sx={{color: "#af4c0f"}}/> : <ThumbDownOffAlt sx={{color: "#5d3735"}}/>}</Button>
                         {classroom.dislikes.length}
                     </p>
                 </div>

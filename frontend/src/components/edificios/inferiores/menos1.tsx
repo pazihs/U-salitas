@@ -54,11 +54,11 @@ const Menos1 = () => {
             d="m1901.91 742.43v34.23h-58.67v-34.23z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b100")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 21" 
+            id="b100" 
             fill-rule="evenodd" 
             className="s0" 
             d="m1790.68 309.7v116.13h-145.47v-116.13z"
@@ -238,41 +238,41 @@ const Menos1 = () => {
             d="m824.38 486.95c-33.46 0-60.5-26.77-60.5-59.9 0-33.12 27.04-59.89 60.5-59.89 33.47 0 60.51 26.77 60.51 59.89 0 33.13-27.04 59.9-60.51 59.9z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b04")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 7" 
+            id="b04" 
             fill-rule="evenodd" 
             className="s0" 
             d="m734.54 776.66v183.35h-165.02v-183.35z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b03")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 7 copy" 
+            id="b03" 
             fill-rule="evenodd" 
             className="s0" 
             d="m909.34 776.66v183.35h-165.02v-183.35z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b02")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 7 copy 2" 
+            id="b02" 
             fill-rule="evenodd" 
             className="s0" 
             d="m1084.14 776.66v183.35h-165.02v-183.35z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b01")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 7 copy 3" 
+            id="b01" 
             fill-rule="evenodd" 
             className="s0" 
             d="m1258.94 776.66v183.35h-165.02v-183.35z"
@@ -285,41 +285,41 @@ const Menos1 = () => {
             d="m899.56 335.37v365.5h-325.15v-365.5z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b08")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 3" 
+            id="b08" 
             fill-rule="evenodd" 
             className="s0" 
             d="m740.65 20v257.92h-184.58v-257.92z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b05")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 3 copy" 
+            id="b05" 
             fill-rule="evenodd" 
             className="s0" 
             d="m1263.83 20v257.92h-184.58v-257.92z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b07")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 4" 
+            id="b07" 
             fill-rule="evenodd" 
             className="s0" 
             d="m911.78 86.01v189.47h-125.9v-189.47z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b06")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 4 copy" 
+            id="b06" 
             fill-rule="evenodd" 
             className="s0" 
             d="m1041.36 86.01v189.47h-125.91v-189.47z"
@@ -335,11 +335,11 @@ const Menos1 = () => {
             d="m455.84 376.94v281.14h-438.84v-281.14z"
         />
             <path 
-            onClick={() => routeChange("/classrooms/soon")}
+            onClick={() => routeChange("/classrooms/b09")}
             onMouseEnter={(e) => handleHover(e, true)} 
             onMouseLeave={(e) => handleHover(e, false)} 
             style={shapeBaseStyle}
-            id="Forma 12" 
+            id="b09" 
             fill-rule="evenodd" 
             className="s0" 
             d="m1290.72 326.82v377.71h-319.04v-377.71z"
