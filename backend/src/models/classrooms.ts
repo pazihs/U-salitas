@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export interface ClassroomData {
-  id: string;
+  _id: string;
   name: string;
   floor: number;
   building: "850" | "851";
@@ -15,6 +15,11 @@ export interface ClassroomData {
 }
 
 const classroomSchema = new mongoose.Schema({
+  _id: {
+    type: String,
+    minLength: 2,
+    required: true
+  },
   name: {
     type: String,
     minLength: 2,
@@ -41,12 +46,10 @@ const classroomSchema = new mongoose.Schema({
 });
 
 classroomSchema.set("toJSON", {
-  transform: (
-    document,
-    returnedObject: { id?: string; _id?: mongoose.Types.ObjectId; __v?: number }
-  ) => {
-    returnedObject.id = returnedObject._id?.toString();
-    delete returnedObject._id;
+  transform: (document, returnedObject: any) => {
+    if (!returnedObject.id) {
+      returnedObject._id = returnedObject._id?.toString();
+    }
     delete returnedObject.__v;
   },
 });

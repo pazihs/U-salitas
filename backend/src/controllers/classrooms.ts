@@ -33,6 +33,7 @@ router.post("/", async (request, response, next) => {
     });
   } else {
     const classroom = {
+      id: (body.name as string).toLowerCase().replace(" ", ""),
       name: body.name,
       floor: body.floor,
       building: body.building,
@@ -57,6 +58,7 @@ router.put("/:id", async (request, response, next) => {
   const classroom = await Classroom.findById(request.params.id);
 
   if (classroom) {
+    classroom.id = request.params.id;
     classroom.name = name;
     classroom.floor = floor;
     classroom.building = building;

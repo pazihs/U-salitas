@@ -19,12 +19,19 @@ const Classroom = () => {
     useEffect(() => {
         const init = async () => {
             if (id) {
-                classrooms.getClassroom(id)
-                    .then(classroom => setClassroom(classroom));
-                setUser(await login.restoreLogin());
-                if (user && classroom) {
-                    setLiked(classroom?.likes.includes(user.id));
-                    setDisliked(classroom?.dislikes.includes(user.id));
+                setClassroom(null);
+                setLiked(false);
+                setDisliked(false);
+
+                const fetchedClassroom = await classrooms.getClassroom(id);
+                setClassroom(fetchedClassroom);
+
+                const currentUser = await login.restoreLogin();
+                setUser(currentUser);
+
+                if (currentUser && fetchedClassroom) {
+                    setLiked(fetchedClassroom.likes.includes(currentUser.id));
+                    setDisliked(fetchedClassroom.dislikes.includes(currentUser.id));
                 }
             }
         };
@@ -36,11 +43,11 @@ const Classroom = () => {
             if (!disliked) {
                 if (liked) {
                     setClassroom({ ...classroom, likes: classroom.likes.filter(id => id !== user.id) });
-                    await classrooms.removeLike(classroom.id, user.id);
+                    await classrooms.removeLike(classroom._id, user.id);
                     setLiked(false);
                 } else {
                     setClassroom({ ...classroom, likes: classroom.likes.concat(user.id) });
-                    await classrooms.addLike(classroom.id, user.id);
+                    await classrooms.addLike(classroom._id, user.id);
                     setLiked(true);
                 }
             } else {
@@ -57,11 +64,11 @@ const Classroom = () => {
             if (!liked) {
                 if (disliked) {
                     setClassroom({ ...classroom, dislikes: classroom.dislikes.filter(id => id !== user.id) });
-                    await classrooms.removeDislike(classroom.id, user.id);
+                    await classrooms.removeDislike(classroom._id, user.id);
                     setDisliked(false);
                 } else {
                     setClassroom({ ...classroom, dislikes: classroom.dislikes.concat(user.id) });
-                    await classrooms.addDislike(classroom.id, user.id);
+                    await classrooms.addDislike(classroom._id, user.id);
                     setDisliked(true);
                 }
             } else {

@@ -1,5 +1,5 @@
 import { test, expect, request } from "@playwright/test"
-import { loginWith } from "./helper";
+import { initialClassrooms, loginWith } from "./helper";
 
 test.describe("U-salitas app", () => {
     test.beforeEach(async ({ page, request }) => {
@@ -10,6 +10,9 @@ test.describe("U-salitas app", () => {
                 email: "user_test@uchile.cl",
                 password: "password_test",
             }
+        });
+        initialClassrooms.forEach(async (classroom) => {
+            await request.post("api/classrooms", { data: classroom });
         });
 
         await page.goto("/");
@@ -75,10 +78,34 @@ test.describe("U-salitas app", () => {
         });
     });
 
+    test.describe("when searching for a classroom", () => {
+        test("search bar is in navbar", async ({ page }) => {
+            await expect(page.getByText("Busca una sala, edificio, zona...")).toBeVisible();
+            await page.getByPlaceholder("Busca una sala, edificio, zona...").fill("B01");
+            await expect(page.locator('.card-grid')).toBeVisible();
+            await expect(page.locator('.card-grid')).toContainText('B01');
+            // await loginWith(page, "root", "password");
+
+            // await page.waitForURL("/");
+
+            // // verificar que el botón Logout está visible
+            // await expect(page.getByRole("button", { name: "Cerrar sesión" })).toBeVisible();
+
+            // // Hacer click en el botón Logout
+            // await page.getByRole("button", { name: "Cerrar sesión" }).click();
+
+            // await page.waitForURL("/");
+
+            // // Validar que cerró sesión correctamente
+            // await expect(page.getByRole("button", { name: "Entrar" })).toBeVisible();
+        });
+
+    });
+
 
     // se pueden buscar salas
-        // con éxito
-        // búsqueda vacía
-    // ver info de la sala
-    // se puede dar like
+    // con éxito
+    // búsqueda vacía
+    // ver info de la sala -> más información
+    // se puede dar like/no dar cuando no está la sesión iniciada
 })
