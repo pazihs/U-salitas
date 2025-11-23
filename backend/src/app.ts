@@ -11,7 +11,7 @@ import testingRouter from "./controllers/testing";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { seedClassrooms } from "./utils/initDb";
-// import path from "path"
+import path from "path"
 
 const app = express();
 
@@ -47,6 +47,10 @@ app.use("/api/reviews", reviewRouter);
 if (process.env.NODE_ENV === "test") {
   app.use("/api/testing", testingRouter);
 }
+
+app.get(/^(?!\/api).*/, (req, res) => {
+  res.sendFile(path.resolve("dist/index.html"));
+});
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);

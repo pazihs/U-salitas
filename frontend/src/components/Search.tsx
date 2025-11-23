@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import type { ClassroomData } from "../types/classrooms";
+import { TextField, InputAdornment } from "@mui/material";
 import { search } from "../services/search";
 import classrooms from "../services/classrooms";
 import { useClassroomStore } from "../classroomStore";
@@ -43,22 +44,33 @@ function Search() {
     } else {
         return (
             <div className="wrapper" style={{ marginLeft: "auto", marginRight: "30px" }}>
-                <div className="search-wrapper" >
+                <div className="search-wrapper">
                     <div className="search-row">
-                        <SearchIcon sx={{ fontSize: 30}}/>
-                        <input
-                            type="search"
-                            name="search-form"
-                            id="search-form"
-                            className="search-input"
+
+                        <TextField
                             placeholder="Busca una sala, edificio, zona..."
+                            variant="outlined"
+                            size="small"
                             value={q}
                             onChange={(e) => {
                                 setQ(e.target.value);
                                 setQuery(e.target.value);
                                 setClassrooms(search(items, e.target.value, searchParam));
                             }}
+                            InputProps={{
+                                endAdornment: (
+                                    <InputAdornment position="end">
+                                        <SearchIcon sx={{ color: "#5d3537"}}/>
+                                    </InputAdornment>
+                                ),
+                            }}
+                            sx={{
+                                width: "300px",
+                                bgcolor: "#ffffea",
+                                borderRadius: "8px",
+                                borderColor: "#5d3537" }}
                         />
+
                     </div>
                 </div>
             </div>

@@ -3,10 +3,11 @@ import NavBar from './components/NavBar';
 import AppRouter from './components/AppRouter';
 import { Alert, Snackbar } from '@mui/material';
 import { useClassroomStore } from './classroomStore';
+import SearchResult from './components/SearchResult';
 
 const App = () => {
-  const { toast, setToast } = useClassroomStore();
-
+  const { query, toast, setToast } = useClassroomStore();
+  
   const handleClose = () => {
     setToast(null);
   };
@@ -26,7 +27,7 @@ const App = () => {
       </Snackbar>
       <div>
         <NavBar />
-        <AppRouter />
+        {query.length > 0 ? <SearchResult /> : <AppRouter />}
       </div>
     </>
   );

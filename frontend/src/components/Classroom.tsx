@@ -6,7 +6,7 @@ import login from "../services/login";
 import { Button } from "@mui/material";
 import { ThumbDown, ThumbDownOffAlt, ThumbUp, ThumbUpOffAlt } from "@mui/icons-material";
 import { useClassroomStore } from "../classroomStore";
-import uhardcito from "../assets/uhardcito.png";
+//import uhardcito from "../assets/uhardcito.png";
 
 
 const Classroom = () => {
@@ -19,19 +19,12 @@ const Classroom = () => {
     useEffect(() => {
         const init = async () => {
             if (id) {
-                setClassroom(null);
-                setLiked(false);
-                setDisliked(false);
-
-                const fetchedClassroom = await classrooms.getClassroom(id);
-                setClassroom(fetchedClassroom);
-
-                const currentUser = await login.restoreLogin();
-                setUser(currentUser);
-
-                if (currentUser && fetchedClassroom) {
-                    setLiked(fetchedClassroom.likes.includes(currentUser.id));
-                    setDisliked(fetchedClassroom.dislikes.includes(currentUser.id));
+                classrooms.getClassroom(id)
+                    .then(classroom => setClassroom(classroom));
+                setUser(await login.restoreLogin());
+                if (user && classroom) {
+                    setLiked(classroom?.likes.includes(user.id));
+                    setDisliked(classroom?.dislikes.includes(user.id));
                 }
             }
         };
@@ -80,15 +73,13 @@ const Classroom = () => {
         }
     };
 
-    if (!id || !classroom) {
-        return (
-            <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "30px"}}>
-                <h1 style={{alignSelf: "flex-end"}}>¡Ups! Esta página aún no está terminada</h1>
-                <img src={uhardcito} style={{ width: "300px", height: "auto", alignSelf: "flex-start"}}/>
-            </div>
-        );
-    };
-
+    /*
+    <div style={{display: "flex", flexDirection: "column", alignItems: "center", marginTop: "30px"}}>
+        <h1 style={{alignSelf: "flex-end"}}>¡Ups! Esta página aún no está terminada</h1>
+        <img src={uhardcito} style={{ width: "300px", height: "auto", alignSelf: "flex-start"}}/>
+    </div>
+    */
+    if (!id || !classroom) return null;
     return (
         <div style={{ marginTop: "30px", padding: "20px" }}>
             <h2 className="search-title">Sala {classroom.name}</h2>
