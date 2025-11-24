@@ -108,3 +108,26 @@ npm test
 
 # URL de la aplicación:  
 - http://fullstack.dcc.uchile.cl:7169
+
+# Pasos del deploy
+
+- Se compila tal como se describió anteriormente y se sube al servidor la carpeta `backend`:
+    ```
+    scp -P 219 -r backend fullstack@fullstack.dcc.uchile.cl:/home/fullstack/u-salitas/
+    ```
+- Se entra al servidor:
+    ```
+    ssh -p 219 fullstack@fullstack.dcc.uchile.cl
+    ````
+- Se entra a `u-salitas/backend`:
+    ```
+    cd u-salitas/backend
+    ```
+- Se instalan las dependencias
+    ```
+    npm install
+    ```
+- Se corre el proyecto
+    ```
+    npm run start
+    ```
