@@ -37,7 +37,7 @@ Para el estado global se utilizó la librería **Zustand**, y se crearon las sig
 └── classrooms/:id          # Información de una sala en específico
 
 ```
-
+La imagén que iría aca esta en el zip entregado por ucursos, que trata de flujo de autenticación (github nos odia :c)
 ![alt text](auth-flow.png)
 
 ## Descripción de los tests E2E
