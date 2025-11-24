@@ -38,6 +38,8 @@ Para el estado global se utilizó la librería **Zustand**, y se crearon las sig
 
 ```
 
+![alt text](auth-flow.jpg)
+
 ## Descripción de los tests E2E
 Para los tests se utilizó la herramienta **Playwright**. Se cubrió el flujo de la búsqueda, incluyendo los casos en que la búsqueda no existe, existe solo una sala o existen varias salas. Luego, al seleccionar una sala válida, se comprobó que la redirección si al enlace de "más información" funcione correctamente y que los datos correspondiente se muestren de forma adecuada. 
 Dentro de la vista de información de una sala se verifico que sea posible dar like o dislike cuando el usuario esta autenticado, y que se muestre un mensaje de alerta en caso de no tener una sesión iniciada. (_e2e-tests/tests/app.spec.ts_)
