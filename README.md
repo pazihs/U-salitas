@@ -1,5 +1,11 @@
 # Buscador de salas: U-salitas
 
+Integrantes: 
+- Adolfo Arenas Palacios
+- Alejandro Mori A.
+- Constanza Pizarro Oyaneder
+- Paz Catrilaf C.
+---
 U-salitas es una página web para ayudar a buscar salas a través de un mapa dentro de la Facultad de Ciencias Físicas y Matemáticas de la Universidad de Chile. Por otro lado, presenta opción de acceder a información adicional de cada sala, como la capacidad, zona en la que se encuentra, etc. Por último, los usuarios autenticados tienen la opción de dejar un "me gusta" o un "no me gusta" a cada sala.
 
 ## Estructura del estado global
