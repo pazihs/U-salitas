@@ -38,7 +38,7 @@ Para el estado global se utilizó la librería **Zustand**, y se crearon las sig
 
 ```
 
-![alt text](auth-flow.jpg)
+![alt text](auth-flow.png)
 
 ## Descripción de los tests E2E
 Para los tests se utilizó la herramienta **Playwright**. Se cubrió el flujo de la búsqueda, incluyendo los casos en que la búsqueda no existe, existe solo una sala o existen varias salas. Luego, al seleccionar una sala válida, se comprobó que la redirección si al enlace de "más información" funcione correctamente y que los datos correspondiente se muestren de forma adecuada. 
