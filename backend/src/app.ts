@@ -27,12 +27,7 @@ if (config.MONGODB_URI) {
     logger.error("error connecting to MongoDB:", error.message);
   });
 }
-app.use(
-  cors({
-    origin: "http://localhost:3001",
-    credentials: true,
-  })
-);
+
 
 app.use(express.static("dist"));
 app.use(express.json());

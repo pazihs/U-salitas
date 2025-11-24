@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema<UserData>({
   ],
 });
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("u-salitasUser", userSchema);
 
 userSchema.set("toJSON", {
   transform: (

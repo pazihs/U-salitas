@@ -67,7 +67,17 @@ Dentro de la carpeta `backend` correr el siguiente comando para instalar las dep
 npm install
 ```
 
-Para correr el proyecto se necesitan los comandos
+Para correr el proyecto se necesitan utilizar los siguientes comandos y además cambiar env.example por .env e instalar y agregar solo en caso que se corra en **Windows**
+```
+npm install cross-env --save-dev
+```
+además de agregar en **package.json** cross-env como se ve a continuación
+
+```
+"start": "cross-env NODE_ENV=production node dist/src/index.js",
+```
+
+Después de agregar lo anterior solo en caso de ser **Windows** se corre los siguientes comando tanto para **Windows** como **Linux**
 
 ```
 npm run build:ui // para compilar el fronted
