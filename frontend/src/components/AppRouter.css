@@ -1,0 +1,123 @@
+.campus850 {
+  height: 600px;
+  width: 400px !important;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: text-top;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  gap: 10%;
+}
+
+.mainContainer img{
+  width: 100%;
+  max-width: 1080px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border: 2px solid #af4c0f;
+}
+
+.mainContainer svg {
+  width: 100%;
+  max-width: 1080px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border: 2px solid #af4c0f;
+}
+
+.fcfm {
+  height: 600px;
+  width: 400px !important;
+}
+
+.layerContainer {
+  justify-content: center;
+  align-items: center;
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.layerContainer img {
+  height: 70px;
+  width: 100%;
+  border: none;
+}
+
+.layerContainer button {
+  height: 50px;
+  width: 100%;
+  border: none;
+}
+
+.layerContainer button:hover {
+  filter: brightness(150%);
+}
+
+.layerContainer .up:active {
+  transform: translateY(-4px);
+}
+
+.layerContainer .down:active {
+  transform: translateY(4px);
+}
+
+.layerContainer button:disabled {
+  filter: opacity(50%);
+}
+
+.up {
+  background-image: url('../arrows/uparrow.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:contain;
+  background-color:transparent;
+}
+
+.down {
+  background-image: url('../arrows/downarrow.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:contain ;
+  background-color: transparent;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.campusButton{
+  border: 1px outset rgb(224,0,0);
+  background-color: #af4c0f;
+  color: rgb(255,255,234);
+  height:50px;
+  width:100px;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+.campusButton:hover {
+  filter: brightness(150%);
+}
+
+.campusButton:active {
+  transform: translateY(4px);
+}
+
+body {
+  background-color: rgb(255,255,234);
+}
+
+h1 {
+  color: rgba(69, 25, 25, 0.87);
+}
